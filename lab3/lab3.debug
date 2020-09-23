@@ -1,0 +1,328 @@
+346 isSameStructType$init
+399 flow$init
+413 flow
+428 flow$init
+433 redirectAdditionalFn$init
+463 redirectAdditionalFn$1
+484 redirectAdditionalFn
+490 list2string$init
+533 makeList$init
+551 makeList
+557 makeList$init
+562 concat$init
+595 fold$init
+624 foldi$init
+655 length$init
+688 map$init
+715 replace$init
+750 arrayPush$init
+769 arrayPush
+810 arrayPush$init
+815 refArrayPush$init
+837 refArrayPush
+870 refArrayPush$init
+875 extractStruct$init
+898 extractStruct
+922 extractStruct$1
+984 extractStruct
+1000 extractStruct$init
+1005 loggingEnabled$init
+1027 securityModes$init
+1051 isOWASPLevel1$init
+1074 isOWASPLevel1
+1114 isOWASPLevel1$init
+1119 isLoggingEnabled$init
+1145 isLoggingEnabled
+1167 isLoggingEnabled$init
+1172 println2$init
+1208 localStorageEnabled$init
+1235 println$init
+1252 println
+1294 println$init
+1299 i2s$init
+1312 i2s
+1328 i2s$init
+1333 strGlue$init
+1350 strGlue
+1441 strGlue$1
+1512 strGlue
+1538 strGlue$init
+1543 arr2s$init
+1558 arr2s
+1600 arr2s$init
+1605 fib$init
+1618 fib
+1798 fib$init
+1803 fibEff$init
+1819 fibEff
+1948 fibEff$init
+1953 fibTail$init
+1970 fibTail
+2090 fibTail$init
+2095 fibVlob$init
+2112 fibVlob
+2306 fibVlob$init
+2311 main$init
+2325 main
+2475 main$init
+
+0 C:\flow9\lib\ds\tuples.flow 7 1
+39 C:\flow9\lib\ds\tuples.flow 3 1
+77 C:\flow9\lib\ds\tuples.flow 5 1
+141 C:\flow9\lib\ds\tuples.flow 4 1
+191 C:\flow9\lib\dynamic.flow 10 2
+217 C:\flow9\lib\maybe.flow 9 1
+234 C:\flow9\lib\maybe.flow 10 1
+261 C:\flow9\lib\ds\list.flow 11 2
+296 C:\flow9\lib\ds\list.flow 9 2
+318 C:\flow9\lib\securitymode.flow 5 2
+346 C:\flow9\lib\dynamic.flow 5 1
+399 C:\flow9\lib\dynamic.flow 36 0
+413 C:\flow9\lib\dynamic.flow 37 1
+422 C:\flow9\lib\dynamic.flow 37 6
+427 C:\flow9\lib\dynamic.flow 38 0
+458 C:\flow9\lib\net\url.flow 25 70
+472 C:\flow9\lib\net\url.flow 25 84
+477 C:\flow9\lib\net\url.flow 25 84
+490 C:\flow9\lib\ds\list.flow 35 1
+533 C:\flow9\lib\ds\list.flow 78 0
+551 C:\flow9\lib\ds\list.flow 79 1
+556 C:\flow9\lib\ds\list.flow 80 0
+562 C:\flow9\lib\ds\array.flow 10 1
+595 C:\flow9\lib\ds\array.flow 36 1
+624 C:\flow9\lib\ds\array.flow 39 1
+655 C:\flow9\lib\ds\array.flow 7 1
+688 C:\flow9\lib\ds\array.flow 19 1
+715 C:\flow9\lib\ds\array.flow 43 1
+750 C:\flow9\lib\ds\array.flow 349 0
+769 C:\flow9\lib\ds\array.flow 349 26
+778 C:\flow9\lib\ds\array.flow 349 26
+783 C:\flow9\lib\ds\array.flow 349 41
+788 C:\flow9\lib\ds\array.flow 349 41
+794 C:\flow9\lib\ds\array.flow 349 56
+799 C:\flow9\lib\ds\array.flow 349 26
+809 C:\flow9\lib\ds\array.flow 350 0
+815 C:\flow9\lib\ds\array.flow 351 0
+837 C:\flow9\lib\ds\array.flow 351 31
+846 C:\flow9\lib\ds\array.flow 351 31
+851 C:\flow9\lib\ds\array.flow 351 43
+857 C:\flow9\lib\ds\array.flow 351 64
+862 C:\flow9\lib\ds\array.flow 351 43
+869 C:\flow9\lib\ds\array.flow 352 0
+875 C:\flow9\lib\flowstructs.flow 41 0
+898 C:\flow9\lib\flowstructs.flow 42 1
+907 C:\flow9\lib\flowstructs.flow 42 1
+912 C:\flow9\lib\flowstructs.flow 42 9
+917 C:\flow9\lib\flowstructs.flow 42 12
+931 C:\flow9\lib\flowstructs.flow 42 37
+936 C:\flow9\lib\flowstructs.flow 42 59
+941 C:\flow9\lib\flowstructs.flow 42 37
+952 C:\flow9\lib\flowstructs.flow 44 16
+957 C:\flow9\lib\flowstructs.flow 44 16
+968 C:\flow9\lib\flowstructs.flow 45 2
+978 C:\flow9\lib\flowstructs.flow 46 8
+989 C:\flow9\lib\flowstructs.flow 42 1
+999 C:\flow9\lib\flowstructs.flow 47 0
+1024 C:\flow9\lib\securitymode.flow 33 32
+1045 C:\flow9\lib\securitymode.flow 17 41
+1051 C:\flow9\lib\securitymode.flow 19 0
+1074 C:\flow9\lib\securitymode.flow 20 1
+1080 C:\flow9\lib\securitymode.flow 20 37
+1090 C:\flow9\lib\securitymode.flow 20 1
+1106 C:\flow9\lib\securitymode.flow 20 49
+1113 C:\flow9\lib\securitymode.flow 21 0
+1119 C:\flow9\lib\securitymode.flow 39 0
+1145 C:\flow9\lib\securitymode.flow 40 1
+1147 C:\flow9\lib\securitymode.flow 40 2
+1160 C:\flow9\lib\securitymode.flow 40 22
+1166 C:\flow9\lib\securitymode.flow 41 0
+1172 C:\flow9\lib\runtime.flow 164 1
+1232 C:\flow9\lib\runtime.flow 418 26
+1235 C:\flow9\lib\runtime.flow 165 1
+1252 C:\flow9\lib\runtime.flow 166 2
+1261 C:\flow9\lib\runtime.flow 166 6
+1272 C:\flow9\lib\runtime.flow 167 3
+1277 C:\flow9\lib\runtime.flow 167 3
+1292 C:\flow9\lib\runtime.flow 166 2
+1293 C:\flow9\lib\runtime.flow 167 0
+1299 C:\flow9\lib\string.flow 597 0
+1312 C:\flow9\lib\string.flow 597 9
+1321 C:\flow9\lib\string.flow 597 14
+1327 C:\flow9\lib\string.flow 598 0
+1333 C:\flow9\lib\string.flow 850 0
+1350 C:\flow9\lib\string.flow 851 1
+1359 C:\flow9\lib\string.flow 851 5
+1364 C:\flow9\lib\string.flow 851 12
+1375 C:\flow9\lib\string.flow 852 2
+1382 C:\flow9\lib\string.flow 853 10
+1387 C:\flow9\lib\string.flow 853 10
+1393 C:\flow9\lib\string.flow 853 25
+1404 C:\flow9\lib\string.flow 854 3
+1409 C:\flow9\lib\string.flow 854 7
+1420 C:\flow9\lib\string.flow 856 2
+1425 C:\flow9\lib\string.flow 856 25
+1431 C:\flow9\lib\string.flow 856 37
+1450 C:\flow9\lib\string.flow 857 7
+1455 C:\flow9\lib\string.flow 857 14
+1466 C:\flow9\lib\string.flow 857 22
+1471 C:\flow9\lib\string.flow 857 25
+1486 C:\flow9\lib\string.flow 857 40
+1491 C:\flow9\lib\string.flow 857 48
+1496 C:\flow9\lib\string.flow 857 53
+1521 C:\flow9\lib\string.flow 856 14
+1527 C:\flow9\lib\string.flow 856 2
+1537 C:\flow9\lib\string.flow 858 0
+1543 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 2 0
+1558 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 3 1
+1567 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 3 1
+1572 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 3 18
+1577 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 3 9
+1583 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 3 24
+1589 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 3 1
+1599 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 4 0
+1605 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 6 0
+1618 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 7 4
+1627 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 7 7
+1632 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 7 12
+1643 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 8 8
+1653 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 10 12
+1658 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 10 17
+1669 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 11 9
+1684 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 13 12
+1689 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 13 17
+1700 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 14 9
+1705 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 14 12
+1720 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 17 14
+1725 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 17 20
+1731 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 17 14
+1742 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 18 8
+1747 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 18 21
+1752 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 18 25
+1757 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 18 27
+1764 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 18 32
+1769 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 18 36
+1774 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 18 38
+1787 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 18 8
+1797 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 19 0
+1803 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 32 0
+1819 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 33 4
+1828 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 33 7
+1833 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 33 12
+1844 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 34 9
+1855 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 37 8
+1860 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 37 27
+1866 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 37 31
+1872 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 37 31
+1878 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 37 44
+1885 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 37 50
+1891 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 37 54
+1897 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 37 54
+1903 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 37 67
+1911 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 37 8
+1918 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 38 8
+1923 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 38 17
+1929 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 38 20
+1934 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 38 8
+1941 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 39 9
+1947 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 40 0
+1953 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 22 0
+1970 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 23 4
+1979 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 23 7
+1984 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 23 12
+1995 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 24 8
+2005 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 27 8
+2010 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 27 18
+2016 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 27 21
+2021 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 27 34
+2026 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 27 38
+2031 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 27 38
+2037 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 27 52
+2044 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 27 58
+2049 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 27 62
+2054 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 27 62
+2060 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 27 75
+2073 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 27 21
+2079 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 27 8
+2089 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 28 0
+2095 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 44 0
+2112 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 45 4
+2121 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 45 7
+2126 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 45 12
+2137 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 46 8
+2147 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 48 12
+2152 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 48 17
+2163 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 49 9
+2178 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 51 12
+2183 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 51 17
+2194 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 52 9
+2199 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 52 12
+2214 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 55 8
+2219 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 55 25
+2225 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 55 15
+2231 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 55 30
+2236 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 55 40
+2242 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 55 30
+2248 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 55 43
+2253 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 55 46
+2260 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 55 51
+2265 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 55 61
+2271 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 55 51
+2277 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 55 64
+2282 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 55 66
+2295 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 55 8
+2305 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 56 0
+2311 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 59 0
+2325 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 59 6
+2334 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 61 4
+2339 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 61 18
+2345 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 61 12
+2351 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 61 4
+2358 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 63 4
+2363 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 63 31
+2368 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 63 33
+2378 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 63 18
+2384 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 63 12
+2390 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 63 4
+2397 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 65 26
+2402 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 65 29
+2418 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 66 4
+2423 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 66 29
+2428 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 66 18
+2434 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 66 12
+2440 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 66 4
+2447 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 68 4
+2452 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 68 18
+2458 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 68 12
+2464 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 68 4
+2474 C:\Users\??\Desktop\???\Labs\lab3\lab3.flow 69 0
+2499 --end-- 0 -1
+
+L 413 1 0 i
+L 463 1 0 url
+L 463 1 1 fn
+L 769 1 0 array
+L 769 1 1 value
+L 837 1 0 refArray
+L 837 1 1 elem
+L 898 1 0 a
+L 898 1 1 e
+L 922 0 2 t
+L 922 1 0 acc
+L 922 1 1 el
+L 1252 1 0 str
+L 1312 1 0 i
+L 1350 1 0 arr
+L 1350 1 1 sep
+L 1441 1 0 idx
+L 1441 1 1 acc
+L 1441 1 2 e
+L 1441 2 0 sep
+L 1558 1 0 arr
+L 1618 0 1 arr
+L 1618 1 0 n
+L 1819 1 0 n
+L 1819 1 1 acc
+L 1970 1 0 n
+L 1970 1 1 acc
+L 2112 1 0 n
+L 2325 0 0 effArr

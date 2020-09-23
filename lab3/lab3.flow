@@ -1,0 +1,70 @@
+import string;
+
+arr2s(arr : [int]) -> string{
+	strGlue(map(arr, i2s), ", ")
+}
+
+fib(n : int) -> [int]{
+    if(n == 0){
+        [];
+    }
+    else if(n == 1){
+        [0];
+    }
+    else if(n == 2){
+        [0, 1];
+    }
+    else {
+        arr = fib(n-1);
+        concat(arr, [arr[n-2] + arr[n-3]]);
+    }
+}
+
+fibTail(n : int, acc:[int]) -> [int]{
+    if(n <= 2){
+        acc;
+    }
+    else{
+        fibTail(n-1, concat(acc, [acc[length(acc) - 1] +  acc[length(acc) -2]]));
+    }
+}
+
+//Pointers
+fibEff(n : int, acc : ref[int]) -> [int]{
+    if(n <= 2){
+        ^acc;
+    }
+    else{
+        refArrayPush(acc, ^acc[length(^acc)-1] + ^acc[length(^acc)-2]);
+        fibEff(n-1, acc);
+        ^acc;
+    }
+}
+
+//V lob
+fibVlob(n : int) -> [int]{
+    if(n == 0){
+        [];
+    }
+    else if(n == 1){
+        [0];
+    }
+    else if(n == 2){
+        [0, 1];
+    }
+    else{
+        concat(fibVlob(n-1), [fibVlob(n-1)[n -2] + fibVlob(n-1)[n-3]]);
+    }
+}
+
+main(){
+    //fb1
+    println(arr2s(fib(30)));
+    //fbTail
+    println(arr2s(fibTail(30, [0,1])));
+    //fbEff
+    effArr:ref[int] = ref[0, 1];
+    println(arr2s(fibEff(20, effArr)));
+    //fib vlob
+    println(arr2s(fibVlob(15)));
+}

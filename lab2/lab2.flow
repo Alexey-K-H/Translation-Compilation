@@ -1,0 +1,15 @@
+import string;
+arr2s(arr : [int]) -> string
+{
+	strGlue(map(arr, i2s), ", ")
+}
+sumArr(arr : [int]) -> int
+{
+	fold(arr, 0, \acc, n -> acc + n)
+}
+main()
+{
+	arr = [1, 2, 3];
+	println("arr: " + arr2s(arr));
+	println("sum: " + i2s(sumArr(arr)));
+}

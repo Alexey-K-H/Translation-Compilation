@@ -1,0 +1,23 @@
+import string;
+import form/renderform;
+
+arr_to_str(arr:[int])->string{
+    strGlue(map(arr, i2s), ";");
+}
+
+sumArr(arr:[int])-> int{
+    fold(arr, 0, \acc, n -> acc + n);
+}
+
+main(){
+    arr : [int] = [1, 2, 3, 4];
+    str : string = arr_to_str(arr);
+    
+    assert(str == "1;2;3;4", "Error! Incorrect string!");
+    println("Str:" + str);
+
+    sum : int = sumArr(arr);
+    println(sum);
+
+    us = render(Text("Hello window!", []));
+}
