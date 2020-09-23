@@ -1,0 +1,12 @@
+import string;
+import ds/tree;
+
+inds(a: [int], m: int)->[Pair<int, int>] {
+    tree = foldi(a, makeTree(), \index, t, value -> setTree(t, value, arrayPush(getTreeArrayValue(t, value), index)));
+    foldi(a, [], \index, acc, value -> concat(acc, map(getTreeArrayValue(tree, m-value), \x -> Pair(index, x))));
+}
+
+main(){
+    array : [int] = [1, 2, 5, 8, 9, 10, 11, 45, 2, 1, 1, 2];
+    println(inds(array, 3));
+}
