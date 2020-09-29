@@ -79,7 +79,7 @@
 4069 inds$init
 4074 main$init
 4088 main
-4194 main$init
+4159 main$init
 
 0 C:\flow9\lib\ds\tuples.flow 7 1
 39 C:\flow9\lib\ds\tuples.flow 3 1
@@ -422,24 +422,17 @@
 4068 C:\Users\??\Desktop\???\Translation-Compilation\lab4\lab4.flow 7 0
 4074 C:\Users\??\Desktop\???\Translation-Compilation\lab4\lab4.flow 9 0
 4088 C:\Users\??\Desktop\???\Translation-Compilation\lab4\lab4.flow 10 4
-4097 C:\Users\??\Desktop\???\Translation-Compilation\lab4\lab4.flow 10 21
-4102 C:\Users\??\Desktop\???\Translation-Compilation\lab4\lab4.flow 10 24
-4107 C:\Users\??\Desktop\???\Translation-Compilation\lab4\lab4.flow 10 27
-4112 C:\Users\??\Desktop\???\Translation-Compilation\lab4\lab4.flow 10 30
-4117 C:\Users\??\Desktop\???\Translation-Compilation\lab4\lab4.flow 10 33
-4122 C:\Users\??\Desktop\???\Translation-Compilation\lab4\lab4.flow 10 36
-4127 C:\Users\??\Desktop\???\Translation-Compilation\lab4\lab4.flow 10 40
-4132 C:\Users\??\Desktop\???\Translation-Compilation\lab4\lab4.flow 10 44
-4137 C:\Users\??\Desktop\???\Translation-Compilation\lab4\lab4.flow 10 48
-4142 C:\Users\??\Desktop\???\Translation-Compilation\lab4\lab4.flow 10 51
-4147 C:\Users\??\Desktop\???\Translation-Compilation\lab4\lab4.flow 10 54
-4152 C:\Users\??\Desktop\???\Translation-Compilation\lab4\lab4.flow 10 57
-4167 C:\Users\??\Desktop\???\Translation-Compilation\lab4\lab4.flow 11 4
-4172 C:\Users\??\Desktop\???\Translation-Compilation\lab4\lab4.flow 11 24
-4177 C:\Users\??\Desktop\???\Translation-Compilation\lab4\lab4.flow 11 12
-4183 C:\Users\??\Desktop\???\Translation-Compilation\lab4\lab4.flow 11 4
-4193 C:\Users\??\Desktop\???\Translation-Compilation\lab4\lab4.flow 12 0
-4218 --end-- 0 -1
+4097 C:\Users\??\Desktop\???\Translation-Compilation\lab4\lab4.flow 10 19
+4102 C:\Users\??\Desktop\???\Translation-Compilation\lab4\lab4.flow 10 22
+4107 C:\Users\??\Desktop\???\Translation-Compilation\lab4\lab4.flow 10 25
+4112 C:\Users\??\Desktop\???\Translation-Compilation\lab4\lab4.flow 10 28
+4117 C:\Users\??\Desktop\???\Translation-Compilation\lab4\lab4.flow 10 31
+4132 C:\Users\??\Desktop\???\Translation-Compilation\lab4\lab4.flow 11 4
+4137 C:\Users\??\Desktop\???\Translation-Compilation\lab4\lab4.flow 11 22
+4142 C:\Users\??\Desktop\???\Translation-Compilation\lab4\lab4.flow 11 12
+4148 C:\Users\??\Desktop\???\Translation-Compilation\lab4\lab4.flow 11 4
+4158 C:\Users\??\Desktop\???\Translation-Compilation\lab4\lab4.flow 12 0
+4183 --end-- 0 -1
 
 L 573 1 0 i
 L 609 0 2 v
@@ -540,4 +533,4 @@ L 3956 2 0 tree
 L 3956 2 1 m
 L 4002 1 0 x
 L 4002 2 0 index
-L 4088 0 0 array
+L 4088 0 0 arr
