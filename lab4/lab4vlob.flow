@@ -1,5 +1,9 @@
 import string;
 
+inds2s(is : [Pair<int, int>]) -> string{
+    strGlue(map(is, \p -> "<"+i2s(p.first) + ", " + i2s(p.second) + ">"), "\n");
+}
+
 inds(arr: [int], m: int)->[Pair<int, int>]{
     foldi(arr, [], \i, acc, a -> 
             foldi(arr, acc, \j, bcc, b -> 
@@ -11,6 +15,6 @@ inds(arr: [int], m: int)->[Pair<int, int>]{
 }
 
 main(){
-    arr : [int] = [1, 2, 5, 8, 9, 10, 11, 45, 2, 1, 1, 2];
-    println(inds(arr, 3));
+    arr : [int] = [1, 1, 1, 1, 1];
+    println(inds2s(inds(arr, 5)));
 }
