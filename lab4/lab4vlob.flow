@@ -1,0 +1,16 @@
+import string;
+
+inds(arr: [int], m: int)->[Pair<int, int>]{
+    foldi(arr, [], \i, acc, a -> 
+            foldi(arr, acc, \j, bcc, b -> 
+                    if(a + b == m){
+                        concat(bcc, [Pair(i, j)]);
+                    }else{
+                        bcc;
+                    }));
+}
+
+main(){
+    arr : [int] = [1, 2, 5, 8, 9, 10, 11, 45, 2, 1, 1, 2];
+    println(inds(arr, 3));
+}

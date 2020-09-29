@@ -1,0 +1,162 @@
+346 isSameStructType$init
+399 flow$init
+413 flow
+428 flow$init
+433 redirectAdditionalFn$init
+463 redirectAdditionalFn$1
+484 redirectAdditionalFn
+490 concat$init
+523 fold$init
+552 foldi$init
+583 extractStruct$init
+606 extractStruct
+630 extractStruct$1
+692 extractStruct
+708 extractStruct$init
+713 loggingEnabled$init
+735 securityModes$init
+759 isOWASPLevel1$init
+782 isOWASPLevel1
+822 isOWASPLevel1$init
+827 isLoggingEnabled$init
+853 isLoggingEnabled
+875 isLoggingEnabled$init
+880 println2$init
+916 localStorageEnabled$init
+943 println$init
+960 println
+1002 println$init
+1007 inds$init
+1021 inds
+1055 inds$1
+1094 inds$2
+1167 inds$1
+1183 inds
+1203 inds$init
+1208 main$init
+1222 main
+1328 main$init
+
+0 C:\flow9\lib\ds\tuples.flow 7 1
+39 C:\flow9\lib\ds\tuples.flow 3 1
+77 C:\flow9\lib\ds\tuples.flow 5 1
+141 C:\flow9\lib\ds\tuples.flow 4 1
+191 C:\flow9\lib\dynamic.flow 10 2
+217 C:\flow9\lib\maybe.flow 9 1
+234 C:\flow9\lib\maybe.flow 10 1
+261 C:\flow9\lib\ds\list.flow 11 2
+296 C:\flow9\lib\ds\list.flow 9 2
+318 C:\flow9\lib\securitymode.flow 5 2
+346 C:\flow9\lib\dynamic.flow 5 1
+399 C:\flow9\lib\dynamic.flow 36 0
+413 C:\flow9\lib\dynamic.flow 37 1
+422 C:\flow9\lib\dynamic.flow 37 6
+427 C:\flow9\lib\dynamic.flow 38 0
+458 C:\flow9\lib\net\url.flow 25 70
+472 C:\flow9\lib\net\url.flow 25 84
+477 C:\flow9\lib\net\url.flow 25 84
+490 C:\flow9\lib\ds\array.flow 10 1
+523 C:\flow9\lib\ds\array.flow 36 1
+552 C:\flow9\lib\ds\array.flow 39 1
+583 C:\flow9\lib\flowstructs.flow 41 0
+606 C:\flow9\lib\flowstructs.flow 42 1
+615 C:\flow9\lib\flowstructs.flow 42 1
+620 C:\flow9\lib\flowstructs.flow 42 9
+625 C:\flow9\lib\flowstructs.flow 42 12
+639 C:\flow9\lib\flowstructs.flow 42 37
+644 C:\flow9\lib\flowstructs.flow 42 59
+649 C:\flow9\lib\flowstructs.flow 42 37
+660 C:\flow9\lib\flowstructs.flow 44 16
+665 C:\flow9\lib\flowstructs.flow 44 16
+676 C:\flow9\lib\flowstructs.flow 45 2
+686 C:\flow9\lib\flowstructs.flow 46 8
+697 C:\flow9\lib\flowstructs.flow 42 1
+707 C:\flow9\lib\flowstructs.flow 47 0
+732 C:\flow9\lib\securitymode.flow 33 32
+753 C:\flow9\lib\securitymode.flow 17 41
+759 C:\flow9\lib\securitymode.flow 19 0
+782 C:\flow9\lib\securitymode.flow 20 1
+788 C:\flow9\lib\securitymode.flow 20 37
+798 C:\flow9\lib\securitymode.flow 20 1
+814 C:\flow9\lib\securitymode.flow 20 49
+821 C:\flow9\lib\securitymode.flow 21 0
+827 C:\flow9\lib\securitymode.flow 39 0
+853 C:\flow9\lib\securitymode.flow 40 1
+855 C:\flow9\lib\securitymode.flow 40 2
+868 C:\flow9\lib\securitymode.flow 40 22
+874 C:\flow9\lib\securitymode.flow 41 0
+880 C:\flow9\lib\runtime.flow 164 1
+940 C:\flow9\lib\runtime.flow 418 26
+943 C:\flow9\lib\runtime.flow 165 1
+960 C:\flow9\lib\runtime.flow 166 2
+969 C:\flow9\lib\runtime.flow 166 6
+980 C:\flow9\lib\runtime.flow 167 3
+985 C:\flow9\lib\runtime.flow 167 3
+1000 C:\flow9\lib\runtime.flow 166 2
+1001 C:\flow9\lib\runtime.flow 167 0
+1007 C:\Users\??\Desktop\???\Translation-Compilation\lab4\lab4vlob.flow 3 0
+1021 C:\Users\??\Desktop\???\Translation-Compilation\lab4\lab4vlob.flow 4 4
+1030 C:\Users\??\Desktop\???\Translation-Compilation\lab4\lab4vlob.flow 4 4
+1035 C:\Users\??\Desktop\???\Translation-Compilation\lab4\lab4vlob.flow 4 15
+1040 C:\Users\??\Desktop\???\Translation-Compilation\lab4\lab4vlob.flow 4 19
+1045 C:\Users\??\Desktop\???\Translation-Compilation\lab4\lab4vlob.flow 4 19
+1064 C:\Users\??\Desktop\???\Translation-Compilation\lab4\lab4vlob.flow 5 12
+1069 C:\Users\??\Desktop\???\Translation-Compilation\lab4\lab4vlob.flow 5 23
+1074 C:\Users\??\Desktop\???\Translation-Compilation\lab4\lab4vlob.flow 5 28
+1079 C:\Users\??\Desktop\???\Translation-Compilation\lab4\lab4vlob.flow 5 28
+1084 C:\Users\??\Desktop\???\Translation-Compilation\lab4\lab4vlob.flow 5 28
+1103 C:\Users\??\Desktop\???\Translation-Compilation\lab4\lab4vlob.flow 6 23
+1108 C:\Users\??\Desktop\???\Translation-Compilation\lab4\lab4vlob.flow 6 27
+1114 C:\Users\??\Desktop\???\Translation-Compilation\lab4\lab4vlob.flow 6 32
+1125 C:\Users\??\Desktop\???\Translation-Compilation\lab4\lab4vlob.flow 7 24
+1130 C:\Users\??\Desktop\???\Translation-Compilation\lab4\lab4vlob.flow 7 42
+1135 C:\Users\??\Desktop\???\Translation-Compilation\lab4\lab4vlob.flow 7 45
+1150 C:\Users\??\Desktop\???\Translation-Compilation\lab4\lab4vlob.flow 7 24
+1161 C:\Users\??\Desktop\???\Translation-Compilation\lab4\lab4vlob.flow 9 24
+1176 C:\Users\??\Desktop\???\Translation-Compilation\lab4\lab4vlob.flow 5 12
+1192 C:\Users\??\Desktop\???\Translation-Compilation\lab4\lab4vlob.flow 4 4
+1202 C:\Users\??\Desktop\???\Translation-Compilation\lab4\lab4vlob.flow 10 0
+1208 C:\Users\??\Desktop\???\Translation-Compilation\lab4\lab4vlob.flow 13 0
+1222 C:\Users\??\Desktop\???\Translation-Compilation\lab4\lab4vlob.flow 14 4
+1231 C:\Users\??\Desktop\???\Translation-Compilation\lab4\lab4vlob.flow 14 19
+1236 C:\Users\??\Desktop\???\Translation-Compilation\lab4\lab4vlob.flow 14 22
+1241 C:\Users\??\Desktop\???\Translation-Compilation\lab4\lab4vlob.flow 14 25
+1246 C:\Users\??\Desktop\???\Translation-Compilation\lab4\lab4vlob.flow 14 28
+1251 C:\Users\??\Desktop\???\Translation-Compilation\lab4\lab4vlob.flow 14 31
+1256 C:\Users\??\Desktop\???\Translation-Compilation\lab4\lab4vlob.flow 14 34
+1261 C:\Users\??\Desktop\???\Translation-Compilation\lab4\lab4vlob.flow 14 38
+1266 C:\Users\??\Desktop\???\Translation-Compilation\lab4\lab4vlob.flow 14 42
+1271 C:\Users\??\Desktop\???\Translation-Compilation\lab4\lab4vlob.flow 14 46
+1276 C:\Users\??\Desktop\???\Translation-Compilation\lab4\lab4vlob.flow 14 49
+1281 C:\Users\??\Desktop\???\Translation-Compilation\lab4\lab4vlob.flow 14 52
+1286 C:\Users\??\Desktop\???\Translation-Compilation\lab4\lab4vlob.flow 14 55
+1301 C:\Users\??\Desktop\???\Translation-Compilation\lab4\lab4vlob.flow 15 4
+1306 C:\Users\??\Desktop\???\Translation-Compilation\lab4\lab4vlob.flow 15 22
+1311 C:\Users\??\Desktop\???\Translation-Compilation\lab4\lab4vlob.flow 15 12
+1317 C:\Users\??\Desktop\???\Translation-Compilation\lab4\lab4vlob.flow 15 4
+1327 C:\Users\??\Desktop\???\Translation-Compilation\lab4\lab4vlob.flow 16 0
+1352 --end-- 0 -1
+
+L 413 1 0 i
+L 463 1 0 url
+L 463 1 1 fn
+L 606 1 0 a
+L 606 1 1 e
+L 630 0 2 t
+L 630 1 0 acc
+L 630 1 1 el
+L 960 1 0 str
+L 1021 1 0 arr
+L 1021 1 1 m
+L 1055 1 0 i
+L 1055 1 1 acc
+L 1055 1 2 a
+L 1055 2 0 arr
+L 1055 2 1 m
+L 1094 1 0 j
+L 1094 1 1 bcc
+L 1094 1 2 b
+L 1094 2 0 a
+L 1094 2 1 m
+L 1094 2 2 i
+L 1222 0 0 arr
