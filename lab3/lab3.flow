@@ -37,7 +37,6 @@ fibEff(n : int, acc : ref[int]) -> [int]{
     else{
         refArrayPush(acc, ^acc[length(^acc)-1] + ^acc[length(^acc)-2]);
         fibEff(n-1, acc);
-        ^acc;
     }
 }
 
@@ -59,12 +58,12 @@ fibVlob(n : int) -> [int]{
 
 main(){
     //fb1
-    println(arr2s(fib(30)));
+    println(arr2s(fib(10)));
     //fbTail
-    println(arr2s(fibTail(30, [0,1])));
+    println(arr2s(fibTail(10, [0,1])));
     //fbEff
     effArr:ref[int] = ref[0, 1];
-    println(arr2s(fibEff(20, effArr)));
+    println(arr2s(fibEff(10, effArr)));
     //fib vlob
-    println(arr2s(fibVlob(15)));
+    println(arr2s(fibVlob(10)));
 }
