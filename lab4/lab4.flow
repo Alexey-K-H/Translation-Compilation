@@ -1,12 +1,48 @@
 import string;
 import ds/tree;
 
-inds(a: [int], m: int)->[Pair<int, int>] {
-    tree = foldi(a, makeTree(), \index, t, value -> setTree(t, value, arrayPush(getTreeArrayValue(t, value), index)));
-    foldi(a, [], \index, acc, value -> concat(acc, map(getTreeArrayValue(tree, m-value), \x -> Pair(index, x))));
+inds2s(is : [Pair<int, int>]) -> string{
+    strGlue(map(is, \p -> "<"+i2s(p.first) + ", " + i2s(p.second) + ">"), " ") + "\n";
 }
 
+arr_to_str(arr:[int])->string{
+    strGlue(map(arr, i2s), "; ");
+}
+
+//O(nlog(n))
+//makeTree() -> Tree<?, ??>  - делает пустое дерево
+//setTree() - добавление элемента
+//lookUpTree() - поиск элемента в дереве
+
+inds1(a: [int], m: int)->[Pair<int, int>]{
+    if(length(a) == 0){
+        println("Array is empty!\n");
+    }
+
+    mt = foldi(a, makeTree(), \i, acc, n -> 
+                            switch(lookupTree(acc, n)){
+                                Some(inds):setTree(acc, n, concat(inds, [i]));
+                                None():setTree(acc, n, [i]);
+                            });
+                
+    foldi(a, [], \i, acc, b -> 
+                            switch(lookupTree(mt, m - b)){
+                                Some(is): concat(acc, map(is, \j -> Pair(i, j)));
+                                None(): acc;
+                            });
+}
+
+// inds(a: [int], m: int)->[Pair<int, int>] {
+//     tree = foldi(a, makeTree(), \index, t, value -> setTree(t, value, arrayPush(getTreeArrayValue(t, value), index)));
+//     foldi(a, [], \index, acc, value -> concat(acc, map(getTreeArrayValue(tree, m-value), \x -> Pair(index, x))));
+// }
+
 main(){
-    arr : [int] = [2, 3, 1, 1, 1];
-    println(inds(arr, 5));
+    arr : [int] = [1, 1, 1, 1, 1];
+    println(arr_to_str(arr) + "m = 2");
+    println(inds2s(inds1(arr, 2)));
+
+    arr1 : [int] = [];
+    println(arr_to_str(arr1) + " m = 2");
+    println(inds2s(inds1(arr1, 3)));
 }
