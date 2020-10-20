@@ -1,0 +1,34 @@
+import string;
+import lingo/pegcode/driver;
+
+ArExpr::= ArSum, ArInt, ArProd;
+ArInt(value : int);
+ArSum(l: ArExpr, r :ArExpr);
+ArProd(l :ArExpr, r :ArExpr); 
+
+s2ar(s:string)->ArExpr{
+    gram = "#include ar.lingo";
+    parsic(compilePegGrammar(gram), s, defaultPegActions);
+}
+
+ar2i(expr :ArExpr) -> int{
+    switch(expr){
+        ArInt(val) : val;
+        ArSum(l, r) : ar2i(l) + ar2i(r);
+        ArProd(l, r) : ar2i(l) * ar2i(r);
+    }
+}
+
+ar2s(expr :ArExpr) -> string{
+    switch(expr){
+        ArInt(val) : i2s(val);
+        ArSum(l, r) : "(" + ar2s(l) + "+" + ar2s(r) + ")";
+        ArProd(l, r) : "(" + ar2s(l) + "*" + ar2s(r) + ")";
+    }
+}
+
+main(){
+    str = "(1+(2*3))";
+    println(ar2i(s2ar(str)));//Выводит значение арифметичексого выражения
+    println(ar2s(s2ar(str)));//Выводит само арифметическое выражение
+}

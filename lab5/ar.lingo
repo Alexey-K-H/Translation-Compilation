@@ -1,0 +1,5 @@
+s = sum | prod | int;
+sum = "(" s:l "+" s:r ")" {ArSum(:l, :r)};
+prod = "(" s:l "*" s:r ")" {ArProd(:l, :r)};
+int = digit + $x{ArInt(s2i(:x))};
+digit = '0'-'9';
