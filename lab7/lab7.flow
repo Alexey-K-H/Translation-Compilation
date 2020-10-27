@@ -1,0 +1,106 @@
+import string;
+import lingo/pegcode/driver;
+import ds/list;
+
+//Преобразование инфиксной формы в постфиксную(обратную польскую)
+//Вычислние выражения по обратной польской записи
+//Преобразование польской в скобочную
+
+ArExpr::= ArPlus, ArInt, ArMult;
+ArInt(value : int);
+ArPlus(l: ArExpr, r :ArExpr);
+ArMult(l :ArExpr, r :ArExpr);
+
+ArRPN ::= OpRPN, ValRPN;
+ValRPN(val: int);
+OpRPN ::= PlusRPN, MultRPN;
+PlusRPN();
+MultRPN();
+
+
+//Преобразование арифметического выражения в обратную польскую нотацию
+ar2rpn(expr: ArExpr)->[ArRPN]{
+    switch(expr){
+        ArPlus(l, r): concat(concat(ar2rpn(l), ar2rpn(r)), [PlusRPN()]);
+        ArMult(l, r): concat(concat(ar2rpn(l), ar2rpn(r)), [MultRPN()]);
+        ArInt(v): [ValRPN(v)];
+    }
+}
+
+// //Преобразование обратной польской нотации в в=арифметическое выражение
+// rpn2ar(expr: [ArRPN])->Maybe<ArExpr>{
+
+// }
+
+rpn2i(expr: [ArRPN])->Maybe<int>{
+    apply_op = \op, st ->{
+        switch(st){
+            Cons(a1, t1):{
+                switch(t1){
+                    Cons(a2, t2): Some(Cons(op(a1, a2), t2));
+                    EmptyList(): None();
+                }
+            }
+            EmptyList(): None();
+        }
+    }
+
+    stack = fold(expr, Some(makeList()), \acc, r ->{
+        maybeBind(acc, \ac ->{
+            switch(r){
+                ValRPN(v): Some(Cons(v, ac));
+                OpRPN() : apply_op(\a1, a2 ->{
+                    switch(r){
+                        PlusRPN(): a1 + a2;
+                        MultRPN(): a1 * a2;
+                    }
+                }, ac);
+            }
+        })
+    });
+
+    switch(stack){
+        None(): None();
+        Some(v):{
+            if(countList(v) == 1){
+                Some(headList(v, 0));
+            }
+            else{
+                None();
+            }
+        }
+    }
+}
+
+//Значение арифметического выражения
+ar2i(expr: ArExpr) -> int{
+    switch(expr){
+        ArPlus(l, r): ar2i(l) + ar2i(r);
+        ArMult(l, r): ar2i(l) * ar2i(r);
+        ArInt(v): v;
+    }
+}
+
+//Преобразование арифметического выражения в строку
+ar2s(expr: ArExpr) -> string{
+    switch(expr){
+        ArPlus(l, r): "(" + ar2s(l) + "+" + ar2s(r) + ")";
+        ArMult(l, r): "(" + ar2s(l) + "*" + ar2s(r) + ")";
+        ArInt(v): i2s(v);
+    }
+}
+
+//Преобразование строки в арифметическое выражение
+s2ar(s:string)->ArExpr{
+    gram = "#include /calc.lingo";
+    parsic(compilePegGrammar(gram), s, defaultPegActions);
+}
+
+main(){
+    str = "((2+3)*2)";
+    expr = s2ar(str);
+    rpnExpr = ar2rpn(expr);
+    valueRPN = rpn2i(rpnExpr);
+    println(valueRPN);
+    
+}
