@@ -4,7 +4,6 @@ import ds/list;
 
 //Преобразование инфиксной формы в постфиксную(обратную польскую)
 //Вычислние выражения по обратной польской записи
-//Преобразование польской в скобочную
 
 ArExpr::= ArPlus, ArInt, ArMult;
 ArInt(value : int);
@@ -17,7 +16,6 @@ OpRPN ::= PlusRPN, MultRPN;
 PlusRPN();
 MultRPN();
 
-
 //Преобразование арифметического выражения в обратную польскую нотацию
 ar2rpn(expr: ArExpr)->[ArRPN]{
     switch(expr){
@@ -27,12 +25,9 @@ ar2rpn(expr: ArExpr)->[ArRPN]{
     }
 }
 
-// //Преобразование обратной польской нотации в в=арифметическое выражение
-// rpn2ar(expr: [ArRPN])->Maybe<ArExpr>{
-
-// }
-
 rpn2i(expr: [ArRPN])->Maybe<int>{
+
+    //Применяет операцию к двум значениям лежащим выше всех в стеке, если они есть
     apply_op = \op, st ->{
         switch(st){
             Cons(a1, t1):{
@@ -45,6 +40,7 @@ rpn2i(expr: [ArRPN])->Maybe<int>{
         }
     }
 
+    //Срздает список, который используется в качетсве основы стека
     stack = fold(expr, Some(makeList()), \acc, r ->{
         maybeBind(acc, \ac ->{
             switch(r){
@@ -59,6 +55,7 @@ rpn2i(expr: [ArRPN])->Maybe<int>{
         })
     });
 
+    //Извлекает содержимое стека
     switch(stack){
         None(): None();
         Some(v):{
@@ -102,5 +99,4 @@ main(){
     rpnExpr = ar2rpn(expr);
     valueRPN = rpn2i(rpnExpr);
     println(valueRPN);
-    
 }
