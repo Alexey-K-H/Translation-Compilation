@@ -132,16 +132,30 @@ s2ar(s:string)->ArExpr{
     parsic(compilePegGrammar(gram), s, defaultPegActions);
 }
 
+
+//Преобразование польской нотации в строку
+rpn2s(e:[ArRPN])->string{
+    fold(e, "", \acc, n-> 
+                        switch(n){
+                            ValRPN(v):acc + i2s(v);
+                            PlusRPN():acc + "+";
+                            MultRPN():acc + "*";
+                        });
+}
+
+
 main(){
     str = "((2+3)*5)";
-    println("Expression str: " + str);
+    println("Expression str:" + str);
     expr = s2ar(str);
+    println("ArExpr:" + ar2s(expr));
     rpnExpr = ar2rpn(expr);
+    println("RPN:" + rpn2s(rpnExpr));
     valueRPN = rpn2i(rpnExpr);
     expr1 = rpn2ar(rpnExpr);
     //println(expr1);
     if(isSome(valueRPN)){
-        println(either(valueRPN, 0));
+        println("Result:" + i2s(either(valueRPN, 0)));
     }
     else{
         println("No result!");
