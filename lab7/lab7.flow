@@ -2,9 +2,6 @@ import string;
 import lingo/pegcode/driver;
 import ds/list;
 
-//Преобразование инфиксной формы в постфиксную(обратную польскую)
-//Вычислние выражения по обратной польской записи
-
 ArExpr::= ArPlus, ArInt, ArMult;
 ArInt(value : int);
 ArPlus(l: ArExpr, r :ArExpr);
@@ -25,6 +22,48 @@ ar2rpn(expr: ArExpr)->[ArRPN]{
     }
 }
 
+//Преобразование обратной польской нотации в арифметическое выражение
+rpn2ar(e: [ArRPN]) -> Maybe<ArExpr> {
+
+	apply_op = \op, st -> {
+		switch(st){
+			Cons(a1, t1):{
+				switch(t1){
+					Cons(a2, t2): Some(Cons(op(a1,a2), t2));
+					EmptyList(): None();
+				}
+			}
+			EmptyList(): None();
+		}
+	}
+	
+    stack = fold(e, Some(makeList()), \acc, r ->{
+		maybeBind(acc, \ac -> {
+			switch(r){
+				ValRPN(v): Some(Cons(ArInt(v),ac));
+				OpRPN() : apply_op(\a1, a2 -> {
+					switch(r){
+						PlusRPN(): ArPlus(a1, a2);
+						MultRPN(): ArMult(a1, a2);
+					}
+				}, ac);
+			}
+		})
+	});
+	
+	switch(stack){
+		None(): None();
+		Some(v):{
+			if(countList(v) == 1){
+                Some(headList(v, ArInt(0)));
+            }
+			else {
+                None();
+            }
+		}
+	}
+}
+
 rpn2i(expr: [ArRPN])->Maybe<int>{
 
     //Применяет операцию к двум значениям лежащим выше всех в стеке, если они есть
@@ -40,7 +79,7 @@ rpn2i(expr: [ArRPN])->Maybe<int>{
         }
     }
 
-    //Срздает список, который используется в качетсве основы стека
+    //Использует список в качестве основы стека
     stack = fold(expr, Some(makeList()), \acc, r ->{
         maybeBind(acc, \ac ->{
             switch(r){
@@ -55,7 +94,7 @@ rpn2i(expr: [ArRPN])->Maybe<int>{
         })
     });
 
-    //Извлекает содержимое стека
+    //Извлекает содержимое стека после выполнения всех вычислений
     switch(stack){
         None(): None();
         Some(v):{
@@ -94,9 +133,17 @@ s2ar(s:string)->ArExpr{
 }
 
 main(){
-    str = "((2+3)*2)";
+    str = "((2+3)*5)";
+    println("Expression str: " + str);
     expr = s2ar(str);
     rpnExpr = ar2rpn(expr);
     valueRPN = rpn2i(rpnExpr);
-    println(valueRPN);
+    expr1 = rpn2ar(rpnExpr);
+    //println(expr1);
+    if(isSome(valueRPN)){
+        println(either(valueRPN, 0));
+    }
+    else{
+        println("No result!");
+    }
 }
