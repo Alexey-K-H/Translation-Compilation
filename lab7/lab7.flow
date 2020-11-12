@@ -1,0 +1,138 @@
+import string;
+import lingo/pegcode/driver;
+import ds/tree;
+import math/math;
+
+AlgExp ::= AlgPlus, AlgMinus, AlgMult, AlgDiv, AlgInt, AlgVar, AlgNeg;
+AlgPlus(l:AlgExp, r:AlgExp);
+AlgMinus(l:AlgExp, r:AlgExp);
+AlgMult(l:AlgExp, r:AlgExp);
+AlgDiv(l:AlgExp, r:AlgExp);
+AlgVar(var:string);
+AlgInt(val:int);
+AlgNeg(l:AlgExp);
+
+//Структура рационального числа
+RatNum(num: int, den: int);
+
+//Сумма рациональных чисел
+sumRatNum(r1: RatNum, r2: RatNum)->RatNum{
+    newNum = r1.num * r2.den + r2.num * r1.den;
+    newDen = r1.den * r2.den;
+    if(newNum == 0){
+        RatNum(0, 1);
+    }
+    else{
+        gcdnum = gcd(newNum, newDen);
+        RatNum(newNum/gcdnum, newDen/gcdnum);
+    }
+}
+
+//Умножение рациональных чисел
+multRatNum(r1: RatNum, r2: RatNum)->RatNum{
+    newNum = r1.num * r2.num;
+    newDen = r1.den * r2.den;
+    gcdnum = gcd(newNum, newDen);
+    RatNum(newNum/gcdnum, newDen/gcdnum);
+}
+
+//Преобразоваине числа в строку
+ratNum2s(r : Maybe<RatNum>)->string{
+    switch(r){
+        None():"No result!";
+        Some(val):{
+            i2s(val.num) + "/" + i2s(val.den);
+        }
+    }
+}
+
+//Преобразование строки в алг. выражение
+s2alg(s: string)->AlgExp{
+    gr = "#include calc.lingo";
+    parsic(compilePegGrammar(gr), s, defaultPegActions);
+}
+
+//Преобразование алг. выражения в строку 
+alg2s(e :AlgExp)->string{
+    switch(e){
+        AlgPlus(l,r): "(" + alg2s(l) + "+" + alg2s(r) + ")";
+        AlgMinus(l,r): "(" + alg2s(l) + "+" + alg2s(r) + ")";
+        AlgMult(l,r): "(" + alg2s(l) + "*" + alg2s(r) + ")";
+        AlgDiv(l,r): "(" + alg2s(l) + "/" + alg2s(r) + ")";
+        AlgNeg(v): "(" + "-" + alg2s(v) + ")";
+        AlgInt(v): i2s(v);
+        AlgVar(v): v;
+    }
+}
+
+//Получение значений параметров для выполнения операции
+getParam(mb1:Maybe<RatNum>, mb2:Maybe<RatNum>)->Maybe<Pair<RatNum, RatNum>>{
+    if(isSome(mb1) && isSome(mb2)){
+        v1 = either(mb1, RatNum(0, 0));
+        v2 = either(mb2, RatNum(0, 0));
+        Some(Pair(v1, v2));
+    }
+    else{
+        None();
+    }
+}
+
+//Значение алгебраического выражения
+alg2i(e:AlgExp, varValues: Tree<string, int>)->Maybe<RatNum>{
+    switch(e){
+        AlgPlus(l,r):{
+            switch(getParam(alg2i(l, varValues), alg2i(r, varValues))){
+                Some(v):Some(sumRatNum(v.first, v.second));
+                None():None();
+            }
+        }
+
+        AlgMinus(l,r):{
+            switch(getParam(alg2i(l, varValues), alg2i(r, varValues))){
+                Some(v):Some(sumRatNum(v.first, RatNum(0 - v.second.num, v.second.den)));
+                None(): None();
+            }
+        }
+
+        AlgMult(l,r):{
+            switch(getParam(alg2i(l, varValues), alg2i(r, varValues))){
+                Some(v): Some(multRatNum(v.first, v.second));
+                None(): None();
+            }
+        }
+
+        AlgDiv(l,r):{
+            switch(getParam(alg2i(l, varValues), alg2i(r, varValues))){
+                Some(v):{
+                    if(v.second.num == 0){
+                        None();
+                    }
+                    else{
+                        Some(multRatNum(v.first, RatNum(v.second.den, v.second.num)));
+                    }
+                }
+                None(): None();
+            }
+        }
+
+        AlgNeg(v):{
+            switch(alg2i(v, varValues)){
+                Some(a):Some(RatNum(0 - a.num, a.den));
+                None():None();
+            }
+        }
+
+        AlgInt(v):Some(RatNum(v, 1));
+        AlgVar(v): maybeBind(lookupTree(varValues, v), \a -> {Some(RatNum(a, 1))});
+    }
+}
+
+main(){
+    str = "(((-a) + b)/2)";
+    tree = setTreeValues(makeTree(), [Pair("a", 1), Pair("b", 2)]);
+    expr = s2alg(str);
+    println(str);
+    println(expr);
+    result = alg2i(expr, tree);
+    println(ratNum2s(result));
+}
