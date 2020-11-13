@@ -128,7 +128,7 @@ alg2i(e:AlgExp, varValues: Tree<string, int>)->Maybe<RatNum>{
 }
 
 main(){
-    str = "(((-a) + b)/2)";
+    str = "((-a + b)/2)";
     tree = setTreeValues(makeTree(), [Pair("a", 1), Pair("b", 2)]);
     expr = s2alg(str);
     println(str);
