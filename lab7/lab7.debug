@@ -756,11 +756,11 @@
 58879 alg2i$init
 58894 alg2i
 59950 alg2i$1
-59980 alg2i
-59996 alg2i$init
-60001 main$init
-60015 main
-60194 main$init
+59990 alg2i
+60006 alg2i$init
+60011 main$init
+60025 main
+60274 main$init
 
 0 C:\flow9\lib\ds\tuples.flow 7 1
 39 C:\flow9\lib\ds\tuples.flow 3 1
@@ -6503,38 +6503,46 @@
 59888 C:\flow9\???\Translation-Compilation\lab7\lab7.flow 85 48
 59898 C:\flow9\???\Translation-Compilation\lab7\lab7.flow 85 29
 59914 C:\flow9\???\Translation-Compilation\lab7\lab7.flow 126 8
-59929 C:\flow9\???\Translation-Compilation\lab7\lab7.flow 126 19
-59934 C:\flow9\???\Translation-Compilation\lab7\lab7.flow 126 51
-59939 C:\flow9\???\Translation-Compilation\lab7\lab7.flow 126 29
-59945 C:\flow9\???\Translation-Compilation\lab7\lab7.flow 126 55
-59959 C:\flow9\???\Translation-Compilation\lab7\lab7.flow 126 74
-59964 C:\flow9\???\Translation-Compilation\lab7\lab7.flow 126 77
-59985 C:\flow9\???\Translation-Compilation\lab7\lab7.flow 126 19
-59995 C:\flow9\???\Translation-Compilation\lab7\lab7.flow 127 0
-60001 C:\flow9\???\Translation-Compilation\lab7\lab7.flow 130 0
-60015 C:\flow9\???\Translation-Compilation\lab7\lab7.flow 131 4
-60024 C:\flow9\???\Translation-Compilation\lab7\lab7.flow 131 10
-60055 C:\flow9\???\Translation-Compilation\lab7\lab7.flow 132 11
-60061 C:\flow9\???\Translation-Compilation\lab7\lab7.flow 132 43
-60065 C:\flow9\???\Translation-Compilation\lab7\lab7.flow 132 48
-60075 C:\flow9\???\Translation-Compilation\lab7\lab7.flow 132 57
-60079 C:\flow9\???\Translation-Compilation\lab7\lab7.flow 132 62
-60094 C:\flow9\???\Translation-Compilation\lab7\lab7.flow 132 11
-60105 C:\flow9\???\Translation-Compilation\lab7\lab7.flow 133 11
-60110 C:\flow9\???\Translation-Compilation\lab7\lab7.flow 133 11
-60121 C:\flow9\???\Translation-Compilation\lab7\lab7.flow 134 4
-60126 C:\flow9\???\Translation-Compilation\lab7\lab7.flow 134 12
-60132 C:\flow9\???\Translation-Compilation\lab7\lab7.flow 134 4
-60139 C:\flow9\???\Translation-Compilation\lab7\lab7.flow 135 4
-60144 C:\flow9\???\Translation-Compilation\lab7\lab7.flow 135 4
-60151 C:\flow9\???\Translation-Compilation\lab7\lab7.flow 136 13
-60156 C:\flow9\???\Translation-Compilation\lab7\lab7.flow 136 25
-60161 C:\flow9\???\Translation-Compilation\lab7\lab7.flow 136 13
-60172 C:\flow9\???\Translation-Compilation\lab7\lab7.flow 137 4
-60177 C:\flow9\???\Translation-Compilation\lab7\lab7.flow 137 12
-60183 C:\flow9\???\Translation-Compilation\lab7\lab7.flow 137 4
-60193 C:\flow9\???\Translation-Compilation\lab7\lab7.flow 138 0
-60218 --end-- 0 -1
+59929 C:\flow9\???\Translation-Compilation\lab7\lab7.flow 126 18
+59934 C:\flow9\???\Translation-Compilation\lab7\lab7.flow 126 50
+59939 C:\flow9\???\Translation-Compilation\lab7\lab7.flow 126 28
+59945 C:\flow9\???\Translation-Compilation\lab7\lab7.flow 126 54
+59959 C:\flow9\???\Translation-Compilation\lab7\lab7.flow 126 73
+59969 C:\flow9\???\Translation-Compilation\lab7\lab7.flow 126 80
+59995 C:\flow9\???\Translation-Compilation\lab7\lab7.flow 126 18
+60005 C:\flow9\???\Translation-Compilation\lab7\lab7.flow 127 0
+60011 C:\flow9\???\Translation-Compilation\lab7\lab7.flow 130 0
+60025 C:\flow9\???\Translation-Compilation\lab7\lab7.flow 131 4
+60034 C:\flow9\???\Translation-Compilation\lab7\lab7.flow 131 10
+60065 C:\flow9\???\Translation-Compilation\lab7\lab7.flow 132 11
+60071 C:\flow9\???\Translation-Compilation\lab7\lab7.flow 132 43
+60075 C:\flow9\???\Translation-Compilation\lab7\lab7.flow 132 48
+60085 C:\flow9\???\Translation-Compilation\lab7\lab7.flow 132 57
+60089 C:\flow9\???\Translation-Compilation\lab7\lab7.flow 132 62
+60104 C:\flow9\???\Translation-Compilation\lab7\lab7.flow 132 11
+60115 C:\flow9\???\Translation-Compilation\lab7\lab7.flow 133 12
+60121 C:\flow9\???\Translation-Compilation\lab7\lab7.flow 133 44
+60125 C:\flow9\???\Translation-Compilation\lab7\lab7.flow 133 56
+60130 C:\flow9\???\Translation-Compilation\lab7\lab7.flow 133 59
+60145 C:\flow9\???\Translation-Compilation\lab7\lab7.flow 133 69
+60149 C:\flow9\???\Translation-Compilation\lab7\lab7.flow 133 81
+60154 C:\flow9\???\Translation-Compilation\lab7\lab7.flow 133 84
+60174 C:\flow9\???\Translation-Compilation\lab7\lab7.flow 133 12
+60185 C:\flow9\???\Translation-Compilation\lab7\lab7.flow 134 11
+60190 C:\flow9\???\Translation-Compilation\lab7\lab7.flow 134 11
+60201 C:\flow9\???\Translation-Compilation\lab7\lab7.flow 135 4
+60206 C:\flow9\???\Translation-Compilation\lab7\lab7.flow 135 12
+60212 C:\flow9\???\Translation-Compilation\lab7\lab7.flow 135 4
+60219 C:\flow9\???\Translation-Compilation\lab7\lab7.flow 136 4
+60224 C:\flow9\???\Translation-Compilation\lab7\lab7.flow 136 4
+60231 C:\flow9\???\Translation-Compilation\lab7\lab7.flow 137 13
+60236 C:\flow9\???\Translation-Compilation\lab7\lab7.flow 137 25
+60241 C:\flow9\???\Translation-Compilation\lab7\lab7.flow 137 13
+60252 C:\flow9\???\Translation-Compilation\lab7\lab7.flow 138 4
+60257 C:\flow9\???\Translation-Compilation\lab7\lab7.flow 138 12
+60263 C:\flow9\???\Translation-Compilation\lab7\lab7.flow 138 4
+60273 C:\flow9\???\Translation-Compilation\lab7\lab7.flow 139 0
+60298 --end-- 0 -1
 
 L 3821 1 0 pair
 L 3821 1 1 fn
@@ -7554,7 +7562,8 @@ L 58894 0 10 gsymswitch0
 L 58894 1 0 e
 L 58894 1 1 varValues
 L 59950 1 0 a
-L 60015 0 0 str
-L 60015 0 1 tree
-L 60015 0 2 expr
-L 60015 0 3 result
+L 60025 0 0 str
+L 60025 0 1 tree
+L 60025 0 2 tree2
+L 60025 0 3 expr
+L 60025 0 4 result

@@ -78,7 +78,7 @@ getParam(mb1:Maybe<RatNum>, mb2:Maybe<RatNum>)->Maybe<Pair<RatNum, RatNum>>{
 }
 
 //Значение алгебраического выражения
-alg2i(e:AlgExp, varValues: Tree<string, int>)->Maybe<RatNum>{
+alg2i(e:AlgExp, varValues: Tree<string, RatNum>)->Maybe<RatNum>{
     switch(e){
         AlgPlus(l,r):{
             switch(getParam(alg2i(l, varValues), alg2i(r, varValues))){
@@ -123,16 +123,17 @@ alg2i(e:AlgExp, varValues: Tree<string, int>)->Maybe<RatNum>{
         }
 
         AlgInt(v):Some(RatNum(v, 1));
-        AlgVar(v): maybeBind(lookupTree(varValues, v), \a -> {Some(RatNum(a, 1))});
+        AlgVar(v):maybeBind(lookupTree(varValues, v), \a -> {Some(RatNum(a.num, a.den))});
     }
 }
 
 main(){
     str = "((-a + b)/2)";
-    tree = setTreeValues(makeTree(), [Pair("a", 1), Pair("b", 2)]);
+    //tree = setTreeValues(makeTree(), [Pair("a", 1), Pair("b", 2)]);
+    tree2 = setTreeValues(makeTree(), [Pair("a", RatNum(1, 2)), Pair("b", RatNum(2, 1))]);
     expr = s2alg(str);
     println(alg2s(expr));
     println(expr);
-    result = alg2i(expr, tree);
+    result = alg2i(expr, tree2);
     println(ratNum2s(result));
 }
