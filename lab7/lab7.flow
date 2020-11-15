@@ -23,7 +23,7 @@ sumRatNum(r1: RatNum, r2: RatNum)->RatNum{
         RatNum(0, 1);
     }
     else{
-        gcdnum = gcd(newNum, newDen);
+        gcdnum = iabs(gcd(newNum, newDen));
         RatNum(newNum/gcdnum, newDen/gcdnum);
     }
 }
@@ -32,7 +32,7 @@ sumRatNum(r1: RatNum, r2: RatNum)->RatNum{
 multRatNum(r1: RatNum, r2: RatNum)->RatNum{
     newNum = r1.num * r2.num;
     newDen = r1.den * r2.den;
-    gcdnum = gcd(newNum, newDen);
+    gcdnum = iabs(gcd(newNum, newDen));
     RatNum(newNum/gcdnum, newDen/gcdnum);
 }
 
@@ -128,9 +128,9 @@ alg2i(e:AlgExp, varValues: Tree<string, RatNum>)->Maybe<RatNum>{
 }
 
 main(){
-    str = "((-a + b)/2)";
+    str = "((a + b)/2)";
     //tree = setTreeValues(makeTree(), [Pair("a", 1), Pair("b", 2)]);
-    tree2 = setTreeValues(makeTree(), [Pair("a", RatNum(1, 2)), Pair("b", RatNum(2, 1))]);
+    tree2 = setTreeValues(makeTree(), [Pair("a", RatNum(-1, 2)), Pair("b", RatNum(-1, 2))]);
     expr = s2alg(str);
     println(alg2s(expr));
     println(expr);
