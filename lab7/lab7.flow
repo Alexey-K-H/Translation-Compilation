@@ -107,8 +107,13 @@ alg2i(e:AlgExp, varValues: Tree<string, RatNum>)->Maybe<RatNum>{
                     if(v.second.num == 0){
                         None();
                     }
-                    else{
-                        Some(multRatNum(v.first, RatNum(v.second.den, v.second.num)));
+                    else {
+                        if(v.second.num < 0){
+                            Some(multRatNum(v.first, RatNum(-v.second.den, iabs(v.second.num))));
+                        }
+                        else{
+                            Some(multRatNum(v.first, RatNum(v.second.den, v.second.num))); 
+                        }  
                     }
                 }
                 None(): None();
@@ -128,9 +133,9 @@ alg2i(e:AlgExp, varValues: Tree<string, RatNum>)->Maybe<RatNum>{
 }
 
 main(){
-    str = "((a + b)/2)";
+    str = "(a/-2)";
     //tree = setTreeValues(makeTree(), [Pair("a", 1), Pair("b", 2)]);
-    tree2 = setTreeValues(makeTree(), [Pair("a", RatNum(-1, 2)), Pair("b", RatNum(-1, 2))]);
+    tree2 = setTreeValues(makeTree(), [Pair("a", RatNum(1, 2)), Pair("b", RatNum(-1, 2))]);
     expr = s2alg(str);
     println(alg2s(expr));
     println(expr);
