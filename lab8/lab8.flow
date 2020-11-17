@@ -58,11 +58,24 @@ alg2s(e :AlgExp)->string{
         AlgPlus(l,r): "(" + alg2s(l) + "+" + alg2s(r) + ")";
         AlgMinus(l,r): "(" + alg2s(l) + "-" + alg2s(r) + ")";
         AlgMult(l,r): "(" + alg2s(l) + "*" + alg2s(r) + ")";
-        AlgDiv(l,r): "(" + alg2s(l) + "/" + alg2s(r) + ")";
+        AlgDiv(l,r):{
+            if(r == AlgRat(0,1)){
+                "Error! Division by zero!";
+            }
+            else{
+                "(" + alg2s(l) + "/" + alg2s(r) + ")";
+            }
+        }
         AlgNeg(v): "-" + alg2s(v);
         AlgRat(n,d):{
             if(d == 1){
                 i2s(n);
+            }
+            else if(n == 0 && d != 0){
+                i2s(0);
+            }
+            else if(d == 0){
+                "Error! Division by zero!";
             }
             else{
                 i2s(n) + "/" + i2s(d);
@@ -156,7 +169,7 @@ diff(e: AlgExp, var: string)->AlgExp{
         AlgPlus(l,r):AlgPlus(diff(l,var), diff(r,var));
         AlgMinus(l,r):AlgMinus(diff(l,var), diff(r,var));
         AlgMult(l,r):AlgPlus(AlgMult(diff(l,var),r), AlgMult(l, diff(r,var)));
-        AlgDiv(l,r):AlgDiv(AlgMinus(AlgMult(diff(l,var), r), AlgMult(l,diff(r,var))), AlgMult(r,r));
+        AlgDiv(l,r):{AlgDiv(AlgMinus(AlgMult(diff(l,var), r), AlgMult(l,diff(r,var))), AlgMult(r,r));}
         AlgNeg(v):AlgNeg(diff(v, var));
         AlgRat(n,d):AlgRat(0, 1);
         AlgVar(v):if(v == var) AlgRat(1, 1) else AlgRat(0, 1);
@@ -244,8 +257,11 @@ reduceAlgExp(e:AlgExp)->AlgExp{
             if(newR == AlgRat(1,1)){
                 newL;
             }
-            else if(newL == AlgRat(0,1)){
+            else if(newL == AlgRat(0,1) && newR != AlgRat(0,1)){
                 AlgRat(0,1);
+            }
+            else if(newR == AlgRat(0,1)){
+                AlgRat(0,0);
             }
             else{
                 if(newL.structname == "AlgRat" && newR.structname == "AlgRat"){
@@ -271,44 +287,44 @@ reduceAlgExp(e:AlgExp)->AlgExp{
 }
 
 main(){
-    str = "(-a/2)";
-    tree2 = setTreeValues(makeTree(), [Pair("a", RatNum(1, 2)), Pair("b", RatNum(-1, 2))]);
-    expr = s2alg(str);
-    println(alg2s(expr));
-    println(expr);
-    result = alg2RatNum(expr, tree2);
-    println(ratNum2s(result));
+    // str = "(-a/2)";
+    // tree2 = setTreeValues(makeTree(), [Pair("a", RatNum(1, 2)), Pair("b", RatNum(-1, 2))]);
+    // expr = s2alg(str);
+    // println(alg2s(expr));
+    // println(expr);
+    // result = alg2RatNum(expr, tree2);
+    // println(ratNum2s(result));
 
-    println("");
+    // println("");
 
-    str1 = "((x+1)*(x+1))";
-    expr1 = s2alg(str1);
-    exprDiff1 = diff(expr1, "x");
-    println("d/dx*[" + alg2s(expr1) + "] = " + alg2s(exprDiff1));
-    reduceExprDiff1 = reduceAlgExp(exprDiff1);
-    println("After reduce: " + alg2s(reduceExprDiff1));
+    // str1 = "((x+1)*(x+1))";
+    // expr1 = s2alg(str1);
+    // exprDiff1 = diff(expr1, "x");
+    // println("d/dx*[" + alg2s(expr1) + "] = " + alg2s(exprDiff1));
+    // reduceExprDiff1 = reduceAlgExp(exprDiff1);
+    // println("After reduce: " + alg2s(reduceExprDiff1));
 
-    println("");
+    // println("");
 
-    str2 = "(x - y)";
-    expr2 = s2alg(str2);
-    exprDiff2 = diff(expr2, "y");
-    println("d/dx*[" + alg2s(expr2) + "] = " + alg2s(exprDiff2));
-    reduceExprDiff2 = reduceAlgExp(exprDiff2);
-    println("After reduce: " + alg2s(reduceExprDiff2));
+    // str2 = "(x - y)";
+    // expr2 = s2alg(str2);
+    // exprDiff2 = diff(expr2, "y");
+    // println("d/dx*[" + alg2s(expr2) + "] = " + alg2s(exprDiff2));
+    // reduceExprDiff2 = reduceAlgExp(exprDiff2);
+    // println("After reduce: " + alg2s(reduceExprDiff2));
 
-    println("");
+    // println("");
 
-    str3 = "((2 * y) - y)";
-    expr3 = s2alg(str3);
-    exprDiff3 = diff(expr3, "y");
-    println("d/dx*[" + alg2s(expr3) + "] = " + alg2s(exprDiff3));
-    reduceExprDiff3 = reduceAlgExp(exprDiff3);
-    println("After reduce: " + alg2s(reduceExprDiff3));
+    // str3 = "((2 * y) - y)";
+    // expr3 = s2alg(str3);
+    // exprDiff3 = diff(expr3, "y");
+    // println("d/dx*[" + alg2s(expr3) + "] = " + alg2s(exprDiff3));
+    // reduceExprDiff3 = reduceAlgExp(exprDiff3);
+    // println("After reduce: " + alg2s(reduceExprDiff3));
 
-    println("");
+    // println("");
 
-    str4 = "(((1/2)/(1/4))*y)";
+    str4 = "((2*y)/y)";
     expr4 = s2alg(str4);
     exprDiff4 = diff(expr4, "y");
     println("d/dx*[" + alg2s(expr4) + "] = " + alg2s(exprDiff4));
