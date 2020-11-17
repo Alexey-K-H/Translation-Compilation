@@ -1,0 +1,317 @@
+import string;
+import lingo/pegcode/driver;
+import ds/tree;
+import math/math;
+
+AlgExp ::= AlgPlus, AlgMinus, AlgMult, AlgDiv, AlgRat, AlgVar, AlgNeg;
+AlgPlus(l:AlgExp, r:AlgExp);
+AlgMinus(l:AlgExp, r:AlgExp);
+AlgMult(l:AlgExp, r:AlgExp);
+AlgDiv(l:AlgExp, r:AlgExp);
+AlgVar(var:string);
+AlgRat(num:int, den:int);
+AlgNeg(l:AlgExp);
+
+//Структура рационального числа
+RatNum(num: int, den: int);
+
+//Сумма рациональных чисел
+sumRatNum(r1: RatNum, r2: RatNum)->RatNum{
+    newNum = r1.num * r2.den + r2.num * r1.den;
+    newDen = r1.den * r2.den;
+    if(newNum == 0){
+        RatNum(0, 1);
+    }
+    else{
+        gcdnum = iabs(gcd(newNum, newDen));
+        RatNum(newNum/gcdnum, newDen/gcdnum);
+    }
+}
+
+//Умножение рациональных чисел
+multRatNum(r1: RatNum, r2: RatNum)->RatNum{
+    newNum = r1.num * r2.num;
+    newDen = r1.den * r2.den;
+    gcdnum = iabs(gcd(newNum, newDen));
+    RatNum(newNum/gcdnum, newDen/gcdnum);
+}
+
+//Преобразоваине числа в строку
+ratNum2s(r : Maybe<RatNum>)->string{
+    switch(r){
+        None():"No result!";
+        Some(val):{
+            i2s(val.num) + "/" + i2s(val.den);
+        }
+    }
+}
+
+//Преобразование строки в алг. выражение
+s2alg(s: string)->AlgExp{
+    gr = "#include calc.lingo";
+    parsic(compilePegGrammar(gr), s, defaultPegActions);
+}
+
+//Преобразование алг. выражения в строку 
+alg2s(e :AlgExp)->string{
+    switch(e){
+        AlgPlus(l,r): "(" + alg2s(l) + "+" + alg2s(r) + ")";
+        AlgMinus(l,r): "(" + alg2s(l) + "-" + alg2s(r) + ")";
+        AlgMult(l,r): "(" + alg2s(l) + "*" + alg2s(r) + ")";
+        AlgDiv(l,r): "(" + alg2s(l) + "/" + alg2s(r) + ")";
+        AlgNeg(v): "-" + alg2s(v);
+        AlgRat(n,d):{
+            if(d == 1){
+                i2s(n);
+            }
+            else{
+                i2s(n) + "/" + i2s(d);
+            }
+        }
+        AlgVar(v): v;
+    }
+}
+
+//Получение значений параметров для выполнения операции
+getParam(mb1:Maybe<RatNum>, mb2:Maybe<RatNum>)->Maybe<Pair<RatNum, RatNum>>{
+    if(isSome(mb1) && isSome(mb2)){
+        v1 = either(mb1, RatNum(0, 0));
+        v2 = either(mb2, RatNum(0, 0));
+        Some(Pair(v1, v2));
+    }
+    else{
+        None();
+    }
+}
+
+getRat(e:AlgExp)->RatNum{
+    switch(e){
+        AlgPlus(l,r):RatNum(0,0);
+        AlgMinus(l,r):RatNum(0,0);
+        AlgMult(l,r):RatNum(0,0);
+        AlgDiv(l,r):RatNum(0,0);
+        AlgNeg(v):RatNum(0,0);
+        AlgRat(n,d):RatNum(n,d);
+        AlgVar(v):RatNum(0,0);
+    }
+}
+
+//Значение алгебраического выражения в рациональных числах
+alg2RatNum(e:AlgExp, varValues: Tree<string, RatNum>)->Maybe<RatNum>{
+    switch(e){
+        AlgPlus(l,r):{
+            switch(getParam(alg2RatNum(l, varValues), alg2RatNum(r, varValues))){
+                Some(v):Some(sumRatNum(v.first, v.second));
+                None():None();
+            }
+        }
+
+        AlgMinus(l,r):{
+            switch(getParam(alg2RatNum(l, varValues), alg2RatNum(r, varValues))){
+                Some(v):Some(sumRatNum(v.first, RatNum(0 - v.second.num, v.second.den)));
+                None(): None();
+            }
+        }
+
+        AlgMult(l,r):{
+            switch(getParam(alg2RatNum(l, varValues), alg2RatNum(r, varValues))){
+                Some(v): Some(multRatNum(v.first, v.second));
+                None(): None();
+            }
+        }
+
+        AlgDiv(l,r):{
+            switch(getParam(alg2RatNum(l, varValues), alg2RatNum(r, varValues))){
+                Some(v):{
+                    if(v.second.num == 0){
+                        None();
+                    }
+                    else {
+                        if(v.second.num < 0){
+                            Some(multRatNum(v.first, RatNum(-v.second.den, iabs(v.second.num))));
+                        }
+                        else{
+                            Some(multRatNum(v.first, RatNum(v.second.den, v.second.num))); 
+                        }  
+                    }
+                }
+                None(): None();
+            }
+        }
+
+        AlgNeg(v):{
+            switch(alg2RatNum(v, varValues)){
+                Some(a):Some(RatNum(0 - a.num, a.den));
+                None():None();
+            }
+        }
+
+        AlgRat(n,d):Some(RatNum(n, d));
+        AlgVar(v):maybeBind(lookupTree(varValues, v), \a -> {Some(RatNum(a.num, a.den))});
+    }
+}
+
+diff(e: AlgExp, var: string)->AlgExp{
+    switch(e){
+        AlgPlus(l,r):AlgPlus(diff(l,var), diff(r,var));
+        AlgMinus(l,r):AlgMinus(diff(l,var), diff(r,var));
+        AlgMult(l,r):AlgPlus(AlgMult(diff(l,var),r), AlgMult(l, diff(r,var)));
+        AlgDiv(l,r):AlgDiv(AlgMinus(AlgMult(diff(l,var), r), AlgMult(l,diff(r,var))), AlgMult(r,r));
+        AlgNeg(v):AlgNeg(diff(v, var));
+        AlgRat(n,d):AlgRat(0, 1);
+        AlgVar(v):if(v == var) AlgRat(1, 1) else AlgRat(0, 1);
+    }
+}
+
+reduceAlgExp(e:AlgExp)->AlgExp{
+    switch(e){
+        AlgPlus(l,r):{
+            newL = reduceAlgExp(l);
+            newR = reduceAlgExp(r);
+
+            if(newR == AlgRat(0,1)){
+                newL;
+            }
+            else if(newL == AlgRat(0,1)){
+                newR;
+            }
+            else{
+                if(newL.structname == "AlgRat" && newR.structname == "AlgRat"){
+                    sum = sumRatNum(getRat(newL), getRat(newR));
+                    AlgRat(sum.num, sum.den);
+                }
+                else{
+                   AlgPlus(newL, newR); 
+                }
+            }
+        }
+        AlgMinus(l,r):{
+            newL = reduceAlgExp(l);
+            newR = reduceAlgExp(r);
+
+            if(newR == AlgRat(0,1)){
+                newL;
+            }
+            else if(newL == AlgRat(0,1)){
+                AlgNeg(newR);
+            }
+            else{
+                if(newL.structname == "AlgRat" && newR.structname == "AlgRat"){
+                    minus = sumRatNum(getRat(newL), RatNum(0 - getRat(newR).num, getRat(newR).den));
+                    AlgRat(minus.num, minus.den);
+                }
+                else{
+                   AlgMinus(newL, newR); 
+                }
+            }
+        }
+        AlgMult(l,r):{
+            newL = reduceAlgExp(l);
+            newR = reduceAlgExp(r);
+
+            if(newR == AlgRat(0,1)){
+                AlgRat(0,1);
+            }
+            else if(newL == AlgRat(0,1)){
+                AlgRat(0,1);
+            }
+            else if(newR == AlgRat(1,1)){
+                newL;
+            }
+            else if(newL == AlgRat(1,1)){
+                newR;
+            }
+            else if(newR == AlgRat(-1,1)){
+                AlgNeg(newL);
+            }
+            else if(newL == AlgRat(-1,1)){
+                AlgNeg(newR);
+            }
+            else{
+                if(newL.structname == "AlgRat" && newR.structname == "AlgRat"){
+                    mult = multRatNum(getRat(newL), getRat(newR));
+                    AlgRat(mult.num, mult.den);
+                }
+                else{
+                    AlgMult(newL, newR);
+                }
+            }
+        }
+        AlgDiv(l,r):{
+            newL = reduceAlgExp(l);
+            newR = reduceAlgExp(r);
+
+            if(newR == AlgRat(1,1)){
+                newL;
+            }
+            else if(newL == AlgRat(0,1)){
+                AlgRat(0,1);
+            }
+            else{
+                if(newL.structname == "AlgRat" && newR.structname == "AlgRat"){
+                    div = multRatNum(getRat(newL), RatNum(getRat(newR).den, getRat(newR).num));
+                    AlgRat(div.num, div.den);
+                }
+                else{
+                    AlgDiv(newL, newR);
+                }
+            }
+        }
+        AlgNeg(v):{
+            newV = reduceAlgExp(v);
+            switch(newV){
+                AlgNeg(v1):v1;
+                AlgRat(n,d):AlgRat(0 - n, d);
+                default: AlgNeg(newV);
+            }
+        }
+        AlgVar(v):AlgVar(v);
+        AlgRat(n,d):AlgRat(n,d);
+    }
+}
+
+main(){
+    str = "(-a/2)";
+    tree2 = setTreeValues(makeTree(), [Pair("a", RatNum(1, 2)), Pair("b", RatNum(-1, 2))]);
+    expr = s2alg(str);
+    println(alg2s(expr));
+    println(expr);
+    result = alg2RatNum(expr, tree2);
+    println(ratNum2s(result));
+
+    println("");
+
+    str1 = "((x+1)*(x+1))";
+    expr1 = s2alg(str1);
+    exprDiff1 = diff(expr1, "x");
+    println("d/dx*[" + alg2s(expr1) + "] = " + alg2s(exprDiff1));
+    reduceExprDiff1 = reduceAlgExp(exprDiff1);
+    println("After reduce: " + alg2s(reduceExprDiff1));
+
+    println("");
+
+    str2 = "(x - y)";
+    expr2 = s2alg(str2);
+    exprDiff2 = diff(expr2, "y");
+    println("d/dx*[" + alg2s(expr2) + "] = " + alg2s(exprDiff2));
+    reduceExprDiff2 = reduceAlgExp(exprDiff2);
+    println("After reduce: " + alg2s(reduceExprDiff2));
+
+    println("");
+
+    str3 = "((2 * y) - y)";
+    expr3 = s2alg(str3);
+    exprDiff3 = diff(expr3, "y");
+    println("d/dx*[" + alg2s(expr3) + "] = " + alg2s(exprDiff3));
+    reduceExprDiff3 = reduceAlgExp(exprDiff3);
+    println("After reduce: " + alg2s(reduceExprDiff3));
+
+    println("");
+
+    str4 = "(((1/2)/(1/4))*y)";
+    expr4 = s2alg(str4);
+    exprDiff4 = diff(expr4, "y");
+    println("d/dx*[" + alg2s(expr4) + "] = " + alg2s(exprDiff4));
+    reduceExprDiff4 = reduceAlgExp(exprDiff4);
+    println("After reduce: " + alg2s(reduceExprDiff4));
+}
