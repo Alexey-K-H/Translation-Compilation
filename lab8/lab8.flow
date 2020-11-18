@@ -287,47 +287,30 @@ reduceAlgExp(e:AlgExp)->AlgExp{
 }
 
 main(){
-    // str = "(-a/2)";
-    // tree2 = setTreeValues(makeTree(), [Pair("a", RatNum(1, 2)), Pair("b", RatNum(-1, 2))]);
-    // expr = s2alg(str);
-    // println(alg2s(expr));
-    // println(expr);
-    // result = alg2RatNum(expr, tree2);
-    // println(ratNum2s(result));
+    str1 = "((x+1)*(x+1))";
+    expr1 = s2alg(str1);
+    exprDiff1 = diff(expr1, "x");
+    println("d/dx*[" + alg2s(expr1) + "] = " + alg2s(exprDiff1));
+    reduceExprDiff1 = reduceAlgExp(exprDiff1);
+    println("After reduce: " + alg2s(reduceExprDiff1));
 
-    // println("");
+    println("");
 
-    // str1 = "((x+1)*(x+1))";
-    // expr1 = s2alg(str1);
-    // exprDiff1 = diff(expr1, "x");
-    // println("d/dx*[" + alg2s(expr1) + "] = " + alg2s(exprDiff1));
-    // reduceExprDiff1 = reduceAlgExp(exprDiff1);
-    // println("After reduce: " + alg2s(reduceExprDiff1));
+    str2 = "(x - y)";
+    expr2 = s2alg(str2);
+    exprDiff2 = diff(expr2, "y");
+    println("d/dx*[" + alg2s(expr2) + "] = " + alg2s(exprDiff2));
+    reduceExprDiff2 = reduceAlgExp(exprDiff2);
+    println("After reduce: " + alg2s(reduceExprDiff2));
 
-    // println("");
+    println("");
 
-    // str2 = "(x - y)";
-    // expr2 = s2alg(str2);
-    // exprDiff2 = diff(expr2, "y");
-    // println("d/dx*[" + alg2s(expr2) + "] = " + alg2s(exprDiff2));
-    // reduceExprDiff2 = reduceAlgExp(exprDiff2);
-    // println("After reduce: " + alg2s(reduceExprDiff2));
+    str3 = "((2 * y) - y)";
+    expr3 = s2alg(str3);
+    exprDiff3 = diff(expr3, "y");
+    println("d/dx*[" + alg2s(expr3) + "] = " + alg2s(exprDiff3));
+    reduceExprDiff3 = reduceAlgExp(exprDiff3);
+    println("After reduce: " + alg2s(reduceExprDiff3));
 
-    // println("");
-
-    // str3 = "((2 * y) - y)";
-    // expr3 = s2alg(str3);
-    // exprDiff3 = diff(expr3, "y");
-    // println("d/dx*[" + alg2s(expr3) + "] = " + alg2s(exprDiff3));
-    // reduceExprDiff3 = reduceAlgExp(exprDiff3);
-    // println("After reduce: " + alg2s(reduceExprDiff3));
-
-    // println("");
-
-    str4 = "((2*y)/y)";
-    expr4 = s2alg(str4);
-    exprDiff4 = diff(expr4, "y");
-    println("d/dx*[" + alg2s(expr4) + "] = " + alg2s(exprDiff4));
-    reduceExprDiff4 = reduceAlgExp(exprDiff4);
-    println("After reduce: " + alg2s(reduceExprDiff4));
+    println("");
 }
