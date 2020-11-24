@@ -202,6 +202,153 @@ alg2RatFunc(e:AlgExp) -> RatFunc{
     }
 }
 
+//Упрощение рациональной функции///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+reduceRatFunc(rf: RatFunc) -> RatFunc
+{
+	nomCom = commonFactForSum(rf.nominator);
+	denCom = commonFactForSum(rf.denominator);
+	nomRest = dividePolySum(rf.nominator, nomCom);
+	denRest = dividePolySum(rf.denominator, denCom);
+
+	comsCom = commonFactForFacts(nomCom, denCom);
+	nomComRest = dividePolySum(nomCom, comsCom);
+	denComRest = dividePolySum(denCom, comsCom);
+
+	// println("-----------------------");
+	// println("rf: " + ratFunc2s(rf));
+	// println("nomCom: " + polySum2s(nomCom));
+	// println("denCom: " + polySum2s(denCom));
+	// println("nomRest: " + polySum2s(nomRest));
+	// println("denRest: " + polySum2s(denRest));
+	// println("comsCom: " + polySum2s(comsCom));
+	// println("nomComRest: " + polySum2s(nomComRest));
+	// println("nomComRest: " + polySum2s(denComRest));
+	// println("-----------------------");
+	
+	if(nomRest == denRest)
+	{
+		RatFunc(nomComRest, denComRest);
+	}
+	else if(nomRest == negPolySum(denRest))
+	{
+		negRatFunc(RatFunc(nomComRest, denComRest));
+	}
+	else
+	{
+		multRatFunc(RatFunc(nomRest, denRest), RatFunc(nomComRest,denComRest))
+	}
+}
+
+commonFactForSum(p: PolySum)->PolySum
+{
+	PolySum(makeTree1(commonFactPolyMultForSum(p), commonFactNumForSum(p)));
+}
+
+commonFactPolyMultForSum(p: PolySum) -> PolyMult 
+{
+	if (p.sum == TreeEmpty()) PolyMult(TreeEmpty())
+	else 
+	{
+		firstPoly = (tree2pairs(p.sum))[0];
+		
+		polyMultTree = foldTree(firstPoly.first.mult, firstPoly.first.mult, \k, v, acc -> 
+		{
+			foldTree(p.sum, acc, \k1, v1, acc1 -> 
+			{
+				v2 = lookupTreeDef(k1.mult, k, 0);
+				mergeTreeCustom(acc1, makeTree1(k, if (v2 > v) v else v2), \k2, vv1, vv2 -> 
+				{
+					if (vv1 > vv2) vv2
+					else vv1
+				})
+
+			})
+		})
+	
+		PolyMult(filterTree(polyMultTree, \k, v -> { !(v == 0)}))
+	}
+}
+
+commonFactNumForSum(p: PolySum) -> int
+{
+	if (p.sum == TreeEmpty()) 1
+	else {
+		foldTree(p.sum, 0, \k, v, acc -> 
+		{
+			if(acc == 0) iabs(v)
+			else gcd(acc, iabs(v))
+		})
+	}
+}
+
+commonFactForFacts(p1: PolySum, p2: PolySum) -> PolySum
+{
+	if(p1.sum == TreeEmpty() || p2.sum == TreeEmpty()) PolySum(makeTree1(PolyMult(TreeEmpty()), 1))
+	else
+	{
+		psp1 = (tree2pairs(p1.sum))[0];
+		psp2 = (tree2pairs(p2.sum))[0];
+		
+		resultNum = gcd(psp1.second, psp2.second);
+
+		resultMult = foldTree(psp1.first.mult, psp1.first.mult, \k, v, acc -> 
+		{
+			v2 = lookupTreeDef(psp2.first.mult, k, 0);
+			mergeTreeCustom(acc, makeTree1(k, if(v2 > v) v else v2), \kk, vv1, vv2 -> 
+			{
+				if(vv1 > vv2) vv2 else vv1
+			})
+		})
+		
+		PolySum(makeTree1(PolyMult(filterTree(resultMult, \k, v -> {!(v == 0)})), resultNum));
+	}
+}
+
+dividePolySum(pnum: PolySum, pden: PolySum) -> PolySum
+{
+	psp = (tree2pairs(pden.sum))[0];
+	denNum = psp.second;
+	denMult = psp.first.mult;
+	PolySum
+	(
+		foldTree(pnum.sum, TreeEmpty(), \k, v, acc ->
+		{
+			mergeTree
+			(
+				acc,
+				makeTree1
+				( 
+					PolyMult
+					(
+						filterTree
+						(
+							mergeTreeCustom(k.mult, denMult, \kk, vv1, vv2 -> 
+							{
+								vv2 - vv1;
+							})
+							, \k1, v1 -> {!(v1 == 0)}
+						)
+							
+					),
+					 v/denNum
+				)
+			)
+		})
+	)
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Преобразование рациональной функции в строку
+
+createReduceStr1(var:string, degree: int)->string{
+    if(degree != 1){
+        var + "^" + i2s(degree);
+    }
+    else{
+        var;
+    }
+}
+
 PolyMult2s(pm: PolyMult)->string{
     pairsPolyMult = tree2pairs(pm.mult);
     if(length(pairsPolyMult) == 0){
@@ -209,38 +356,61 @@ PolyMult2s(pm: PolyMult)->string{
     }
     else{
         foldi(pairsPolyMult, "", \i, acc, v -> {
-            polyMultStr = acc + v.first + "^" + i2s(v.second);
+            //polyMultStr = acc + v.first + "^" + i2s(v.second);
+            polyMultStr = acc + createReduceStr1(v.first, v.second);
             if(i == length(pairsPolyMult) - 1){
                 polyMultStr;
             }
             else{
-                polyMultStr + " * "
+                polyMultStr + "*"
             }
         })
     }
 }
 
+createReduceStr(coeff : int, value : string)->string{
+    if((coeff != 1) && (value != "1")){
+        concatStrings([i2s(coeff), value]);
+    }
+    else if((coeff != 1) && (value == "1")){
+        concatStrings([i2s(coeff)]);
+    }
+    else if((coeff == 1) && (value != "1")){
+        concatStrings([value]);
+    }
+    else{
+        concatStrings([i2s(coeff)]);
+    }
+}
+
 PolySum2s(ps:PolySum)->string{
-    pairsPolySum = tree2pairs(ps.sum);
-    "(" + 
+    pairsPolySum = tree2pairs(ps.sum); 
     foldi(pairsPolySum, "", \i, acc, v -> {
-        polySumStr = acc + i2s(v.second) + " * " + PolyMult2s(v.first);
+        //polySumStr = acc + i2s(v.second) + "*" + PolyMult2s(v.first);
+        polySumStr = acc + createReduceStr(v.second, PolyMult2s(v.first));
         if(i == length(pairsPolySum) - 1){
             polySumStr;
         }
         else{
             polySumStr + " + "
         }
-    }) + 
-    ")"
+    });
 }
 
-//Преобразование рациональной функции в строку
 RatFunc2s(rf: RatFunc)->string{
-    PolySum2s(rf.nominator) + "/" + PolySum2s(rf.denominator);
+    if(PolySum2s(rf.denominator) == "1"){
+        PolySum2s(rf.nominator);
+    }
+    else{
+        PolySum2s(rf.nominator) 
+         + "\n-----------------------------------------------------------\n" 
+         + PolySum2s(rf.denominator);
+    }
 }
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //Значение алгебраического выражения в рациональных числах
+
 alg2RatNum(e:AlgExp, varValues: Tree<string, RatNum>)->Maybe<RatNum>{
     switch(e){
         AlgPlus(l,r):{
@@ -339,6 +509,9 @@ reduceAlgExp(e:AlgExp)->AlgExp{
             else if(newL == AlgRat(0,1)){
                 AlgNeg(newR);
             }
+            else if(newL == newR){
+                AlgRat(0,1);
+            }
             else{
                 if(newL.structname == "AlgRat" && newR.structname == "AlgRat"){
                     minus = sumRatNum(getRat(newL), RatNum(0 - getRat(newR).num, getRat(newR).den));
@@ -418,34 +591,21 @@ reduceAlgExp(e:AlgExp)->AlgExp{
 }
 
 main(){
-    str1 = "(((3*(x*x))+(5*y))/(4*x))";
+    str1 = "((((9 * (x * x)) - 4) / ((3 * x) + 2)) - (3 * x))";
     expr1 = s2alg(str1);
-    ratFunc1 = alg2RatFunc(expr1);
-    println(RatFunc2s(ratFunc1));
-
-
-    // exprDiff1 = diff(expr1, "x");
-    // println("d/dx*[" + alg2s(expr1) + "] = " + alg2s(exprDiff1));
-    // reduceExprDiff1 = reduceAlgExp(exprDiff1);
-    // println("After reduce: " + alg2s(reduceExprDiff1));
-
-    // println("");
-
-    // str2 = "(x - y)";
-    // expr2 = s2alg(str2);
-    // exprDiff2 = diff(expr2, "y");
-    // println("d/dx*[" + alg2s(expr2) + "] = " + alg2s(exprDiff2));
-    // reduceExprDiff2 = reduceAlgExp(exprDiff2);
-    // println("After reduce: " + alg2s(reduceExprDiff2));
-
-    // println("");
-
-    // str3 = "((2 * y) - y)";
-    // expr3 = s2alg(str3);
-    // exprDiff3 = diff(expr3, "y");
-    // println("d/dx*[" + alg2s(expr3) + "] = " + alg2s(exprDiff3));
-    // reduceExprDiff3 = reduceAlgExp(exprDiff3);
-    // println("After reduce: " + alg2s(reduceExprDiff3));
-
-    // println("");
+    if(alg2s(expr1) == "Error! Division by zero!"){
+        println(alg2s(expr1));
+    }
+    else{
+        reduceExpr1 = reduceAlgExp(expr1);
+        if(alg2s(reduceExpr1) == "Error! Division by zero!"){
+            println(alg2s(reduceExpr1));
+        }
+        else{
+            ratFunc1 = alg2RatFunc(reduceExpr1);
+            reduceRatFunc1 = reduceRatFunc(ratFunc1);
+            println(RatFunc2s(ratFunc1));
+            println("\nReduce:\n\n" + RatFunc2s(reduceRatFunc1)); 
+        }
+    }
 }
