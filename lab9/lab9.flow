@@ -370,7 +370,7 @@ PolyMult2s(pm: PolyMult)->string{
 
 createReduceStr(coeff : int, value : string)->string{
     if((coeff != 1) && (value != "1")){
-        concatStrings([i2s(coeff), value]);
+        concatStrings([i2s(coeff), "*", value]);
     }
     else if((coeff != 1) && (value == "1")){
         concatStrings([i2s(coeff)]);
@@ -403,8 +403,8 @@ RatFunc2s(rf: RatFunc)->string{
     }
     else{
         PolySum2s(rf.nominator) 
-         + "\n-----------------------------------------------------------\n" 
-         + PolySum2s(rf.denominator);
+        + "\n-----------------------------------------------------------\n" 
+        + PolySum2s(rf.denominator);
     }
 }
 
@@ -591,7 +591,8 @@ reduceAlgExp(e:AlgExp)->AlgExp{
 }
 
 main(){
-    str1 = "((((9 * (x * x)) - 4) / ((3 * x) + 2)) - (3 * x))";
+    //str1 = "((((9 * (x * x)) - 4) / ((3 * x) + 2)) - (3 * x))";
+    str1 = "((x*(1/2))/(x*x))";
     expr1 = s2alg(str1);
     if(alg2s(expr1) == "Error! Division by zero!"){
         println(alg2s(expr1));
