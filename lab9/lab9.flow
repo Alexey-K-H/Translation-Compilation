@@ -209,29 +209,15 @@ reduceRatFunc(rf: RatFunc) -> RatFunc
         rf;
     }
     else{
-        //println("rf: " + RatFunc2s(rf));
-
 	    nomCom = commonFactForSum(rf.nominator);
-        //println("nomCom: " + PolySum2s(nomCom));
 
 	    denCom = commonFactForSum(rf.denominator);
-        //println("denCom: " + PolySum2s(denCom));
-
 	    nomRest = dividePolySum(rf.nominator, nomCom);
-        //println("nomRest: " + PolySum2s(nomRest));
-
 	    denRest = dividePolySum(rf.denominator, denCom);
 
 	    comsCom = commonFactForFacts(nomCom, denCom);
 	    nomComRest = dividePolySum(nomCom, comsCom);
 	    denComRest = dividePolySum(denCom, comsCom);
-	
-        //println("-----------------------");
-	    //println("denRest: " + PolySum2s(denRest));
-	    //println("comsCom: " + PolySum2s(comsCom));
-	    //println("nomComRest: " + PolySum2s(nomComRest));
-	    //println("nomComRest: " + PolySum2s(denComRest));
-	    //println("-----------------------");
 
 	    if(nomRest == denRest)
 	    {
@@ -350,6 +336,54 @@ dividePolySum(pnum: PolySum, pden: PolySum) -> PolySum
 	
 }
 
+podobnieSlogaemie(p:PolySum) -> Tree<string, int>{
+    //Поддерево с положительными знаками
+    plusValues = filterTree(p.sum, \key, value ->{
+        if(value > 0){
+            true;
+        }else{
+            false;
+        }
+    });
+
+    //Положительное поддерево в текстовом виде
+    textTreePlus = foldTree(plusValues, TreeEmpty(), \k,v,acc ->{
+        mergeTree(acc,
+        makeTree1(PolyMult2s(k), v)
+        )
+    });
+
+    // println(getTreeKeys(textTreePlus));
+    // println(getTreeValues(textTreePlus));
+
+    //Поддерево с отрицательными знаками
+    minusValues = filterTree(p.sum, \key, value ->{
+        if(value < 0){
+            true;
+        }else{
+            false;
+        }
+    });
+
+    //Отрицательное дерево в текстовом виде
+    textTreeMinus = foldTree(minusValues, TreeEmpty(), \k,v,acc ->{
+        mergeTree(acc,
+        makeTree1(PolyMult2s(k), v)
+        )
+    });
+
+    // println(getTreeKeys(textTreeMinus));
+    // println(getTreeValues(textTreeMinus));
+
+    //Объединение деревьев
+    filterTree(mergeTreeCustom(textTreePlus, textTreeMinus, \k, v1, v2 ->{
+        v1 + v2;
+    }), \key, value -> {value != 0});
+
+    // println(getTreeKeys(resultTree));
+    // println(getTreeValues(resultTree));
+
+}
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //Преобразование рациональной функции в строку
 
@@ -425,6 +459,52 @@ RatFunc2s(rf: RatFunc)->string{
         PolySum2s(rf.nominator) 
         + "\n-----------------------------------------------------------\n" 
         + PolySum2s(rf.denominator);
+    }
+}
+
+PdobnRat2s(rf:RatFunc)->string{
+    if(PolySum2s(rf.denominator) == "1"){
+        Podobn2s(podobnieSlogaemie(rf.nominator));
+    }
+    else{
+        Podobn2s(podobnieSlogaemie(rf.nominator))
+        + "\n-----------------------------------------------------------\n" 
+        + Podobn2s(podobnieSlogaemie(rf.denominator));
+    }
+}
+
+//Вывод полниома после приведения подобных в виде строки
+createReducePodobn(value: string, coeff: int)->string{
+    if((coeff != 1) && (value != "1")){
+        concatStrings([i2s(coeff), "*", value]);
+    }
+    else if((coeff != 1) && (value == "1")){
+        concatStrings([i2s(coeff)]);
+    }
+    else if((coeff == 1) && (value != "1")){
+        concatStrings([value]);
+    }
+    else{
+        concatStrings([i2s(coeff)]);
+    }
+}
+
+Podobn2s(rfpod: Tree<string, int>)->string{
+    pairs = tree2pairs(rfpod);
+
+    if(length(pairs) == 0){
+        "0";
+    }
+    else{
+        foldi(pairs, "", \i, acc, v -> {
+        polySumStr = acc + createReducePodobn(v.first, v.second);
+        if(i == length(pairs) - 1){
+            polySumStr;
+        }
+        else{
+            polySumStr + " + "
+        }
+        });
     }
 }
 
@@ -610,24 +690,24 @@ reduceAlgExp(e:AlgExp)->AlgExp{
     }
 }
 
-//Общепринятое тождество
-common(from: AlgExp, to: AlgExp);
-//Набор тождеств
-makeCommonsSet(commons: [common]) -> Tree<AlgExp, AlgExp>{
-    fold(commons, makeTree(), \acc, com -> setTree(acc, com.from, com.to));
-}
+// //Общепринятое тождество
+// common(from: AlgExp, to: AlgExp);
+// //Набор тождеств
+// makeCommonsSet(commons: [common]) -> Tree<AlgExp, AlgExp>{
+//     fold(commons, makeTree(), \acc, com -> setTree(acc, com.from, com.to));
+// }
 
-simplifyByCommon(expr: AlgExp, treeCommons :Tree<AlgExp, AlgExp>)->AlgExp{
-    if(containsKeyTree(treeCommons, expr)){
-        println("Found sutiable commmon!");
-        commonTo = lookupTree(treeCommons, expr);
-        commonTo ?? commonTo : expr;
-    }
-    else{
-        println("Cannot simplify!");
-        expr;
-    }
-}
+// simplifyByCommon(expr: AlgExp, treeCommons :Tree<AlgExp, AlgExp>)->AlgExp{
+//     if(containsKeyTree(treeCommons, expr)){
+//         println("Found sutiable commmon!");
+//         commonTo = lookupTree(treeCommons, expr);
+//         commonTo ?? commonTo : expr;
+//     }
+//     else{
+//         println("Cannot simplify!");
+//         expr;
+//     }
+// }
 
 executeStr(str : string){
     println("Input:" + str);
@@ -638,13 +718,13 @@ executeStr(str : string){
     else{
         println("AlgExp:" + alg2s(expr));
 
-        println("Check common facts...");
-        expr_com = simplifyByCommon(expr, commonsTree);
-        println("After common:" + alg2s(expr_com));
+        // println("Check common facts...");
+        // expr_com = simplifyByCommon(expr, commonsTree);
+        // println("After common:" + alg2s(expr_com));
 
-        reduceExpr = reduceAlgExp(expr_com);
-        if(alg2s(reduceExpr) == "Error! Division by zero!"){
-            println(alg2s(reduceExpr));
+        reduceExpr = reduceAlgExp(expr);
+        if(strIndexOf(alg2s(reduceExpr), "Error! Division by zero!") != -1){
+            println("Error! Division by zero!");
         }
         else{
             println("ReduceAlgExp:" + alg2s(reduceExpr));
@@ -652,84 +732,57 @@ executeStr(str : string){
             println("RatFunc:\n" + RatFunc2s(ratFunc));
             reduceRatFunc = reduceRatFunc(ratFunc);
             println("\nReduceRatFunc:\n" + RatFunc2s(reduceRatFunc)); 
+            println("Privodim podobnie....\n\n");
+            println("Final result:\n" + PdobnRat2s(reduceRatFunc));
         }
     }
 }
 
-//Инициализация набора тождеств
-    commonSet = [common(s2alg("((x - z) + (y + z))"), s2alg("(x + y)")),
-    common(s2alg("((x + z) + (y - z))"), s2alg("(x + y)")),
-    common(s2alg("(x + x)"), s2alg("(2 * x)")),
-    common(s2alg("(x-x)"), s2alg("0")),
-    common(s2alg("--x"), s2alg("x")),
-    common(s2alg("(x+y)"), s2alg("(y+x)")),
-    common(s2alg("(x*y)"), s2alg("(y*x)")),
-    common(s2alg("(x+0)"), s2alg("x")),
-    common(s2alg("(0+x)"), s2alg("x")),
-    common(s2alg("(x-0)"), s2alg("x")),
-    common(s2alg("(0-x)"), s2alg("-x")),
-    common(s2alg("(x + -x)"), s2alg("0")),
-    common(s2alg("(-x + x)"), s2alg("0")),
-    common(s2alg("(x*0)"), s2alg("0")),
-    common(s2alg("(0*x)"), s2alg("0")),
-    common(s2alg("(x*1)"), s2alg("x")),
-    common(s2alg("(1*x)"), s2alg("x")),
-    common(s2alg("(x*-1)"), s2alg("-x")),
-    common(s2alg("(-1*x)"), s2alg("-x")),
-    common(s2alg("(x/x)"), s2alg("1")),
-    common(s2alg("(0/x)"), s2alg("0")),
-    common(s2alg("((x*z)+(y*z))"), s2alg("((x+y)*z)")),
-    common(s2alg("((x+y)*z)"), s2alg("((x*z)+(y*z))")),
-    common(s2alg("((x+y)+z)"), s2alg("(x + (y+z))")),
-    common(s2alg("((x*y)*z)"), s2alg("(x*(y*z))")),
-    common(s2alg("((x*x) - (y*y))"), s2alg("((x-y)*(x+y))")),
-    common(s2alg("((x-y)*(x+y))"), s2alg("((x*x) - (y*y))")),
-    common(s2alg("((x-y)*(x-y))"), s2alg("(((x*x) + (y*y)) - (2*(x*y)))")),
-    common(s2alg("(((x*x) + (y*y)) - (2*(x*y)))"), s2alg("((x-y)*(x-y))")),
-    common(s2alg("((x+y)*(x+y))"), s2alg("(((x*x) + (y*y)) + (2*(x*y)))")),
-    common(s2alg("(((x*x) + (y*y)) + (2*(x*y)))"), s2alg("((x+y)*(x+y))"))
-];
+// //Инициализация набора тождеств
+//     commonSet = [common(s2alg("((x - z) + (y + z))"), s2alg("(x + y)")),
+//     common(s2alg("((x + z) + (y - z))"), s2alg("(x + y)")),
+//     common(s2alg("(x + x)"), s2alg("(2 * x)")),
+//     common(s2alg("(x-x)"), s2alg("0")),
+//     common(s2alg("--x"), s2alg("x")),
+//     common(s2alg("(x+y)"), s2alg("(y+x)")),
+//     common(s2alg("(x*y)"), s2alg("(y*x)")),
+//     common(s2alg("(x+0)"), s2alg("x")),
+//     common(s2alg("(0+x)"), s2alg("x")),
+//     common(s2alg("(x-0)"), s2alg("x")),
+//     common(s2alg("(0-x)"), s2alg("-x")),
+//     common(s2alg("(x + -x)"), s2alg("0")),
+//     common(s2alg("(-x + x)"), s2alg("0")),
+//     common(s2alg("(x*0)"), s2alg("0")),
+//     common(s2alg("(0*x)"), s2alg("0")),
+//     common(s2alg("(x*1)"), s2alg("x")),
+//     common(s2alg("(1*x)"), s2alg("x")),
+//     common(s2alg("(x*-1)"), s2alg("-x")),
+//     common(s2alg("(-1*x)"), s2alg("-x")),
+//     common(s2alg("(x/x)"), s2alg("1")),
+//     common(s2alg("(0/x)"), s2alg("0")),
+//     common(s2alg("((x*z)+(y*z))"), s2alg("((x+y)*z)")),
+//     common(s2alg("((x+y)*z)"), s2alg("((x*z)+(y*z))")),
+//     common(s2alg("((x+y)+z)"), s2alg("(x + (y+z))")),
+//     common(s2alg("((x*y)*z)"), s2alg("(x*(y*z))")),
+//     common(s2alg("((x*x) - (y*y))"), s2alg("((x-y)*(x+y))")),
+//     common(s2alg("((x-y)*(x+y))"), s2alg("((x*x) - (y*y))")),
+//     common(s2alg("((x-y)*(x-y))"), s2alg("(((x*x) + (y*y)) - (2*(x*y)))")),
+//     common(s2alg("(((x*x) + (y*y)) - (2*(x*y)))"), s2alg("((x-y)*(x-y))")),
+//     common(s2alg("((x+y)*(x+y))"), s2alg("(((x*x) + (y*y)) + (2*(x*y)))")),
+//     common(s2alg("(((x*x) + (y*y)) + (2*(x*y)))"), s2alg("((x+y)*(x+y))"))
+// ];
 
-commonsTree = makeCommonsSet(commonSet);
+// commonsTree = makeCommonsSet(commonSet);
 
-commonReduce(exprStr: string){
-    afterUsingCommon = simplifyByCommon(s2alg(exprStr), commonsTree);
-    println("Primal expr:" + exprStr);
-    println("After common:" + alg2s(afterUsingCommon));
-}
+// commonReduce(exprStr: string){
+//     afterUsingCommon = simplifyByCommon(s2alg(exprStr), commonsTree);
+//     println("Primal expr:" + exprStr);
+//     println("After common:" + alg2s(afterUsingCommon));
+// }
 
 main(){
-    str1 = "((x-z)+(y+z))";
-    str2 = "((x+z)+(y-z))";
-    str3 = "(x+x)";
-    str4 = "(x-x)";
-    str5 = "--x";
-    str6 = "(x+y)";
-    str7 = "(x*y)";
-    str8 = "(x+0)";
-    str9 = "(0+x)";
-    str10 = "(x-0)";
-    str11 = "(0-x)";
-    str12 = "(x + -x)";
-    str13 = "(-x + x)";
-    str14 = "(x*0)";
-    str15 = "(0*x)";
-    str16 = "(x*1)";
-    str17 = "(1*x)";
-    str18 = "(x * -1)";
-    str19 = "(-1 * x)";
-    str20 = "(x/x)";
-    str21 = "(0/x)";
-    str22 = "((x*z)+(y*z))";
-    str23 = "((x+y)*z)";
-    str24 = "((x+y)+z)";
-    str25 = "((x*y)*z)";
-    str26 = "((x*x) - (y*y))";
-    str27 = "((x-y)*(x+y))";
+    str27 = "(((2*x)-y)*((2*x)+y))";
 
-    //Преобразование в рациональную функцию + проверка на соответствие тождествам 
+    //Преобразование в рациональную функцию + упрощение
     executeStr(str27);
-
-    // //Упрощение с помощью тождеств
-    // commonReduce(str26);
 }
