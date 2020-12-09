@@ -1,0 +1,551 @@
+import runtime;
+import lingo/pegcode/driver;
+import ds/set;
+import ds/array;
+import maybe;
+
+ProgramState ::= EmptyState, State;
+
+EmptyState();
+
+State(
+	label : int,
+	varState : Tree<string, Val>
+);
+
+Val::=IntVal, ArrVal;
+
+IntVal(
+	val : int
+);
+
+ArrVal(
+	array : Tree<int, Val>
+);
+
+VMProgram (
+	operators : [VMOperator],
+	declarations : [Declaration]
+);
+
+VarType ::= ArrayType, Int;
+
+ArrayType(
+	elType : VarType
+);
+
+Int();
+
+Declaration(
+	name : string,
+	type : VarType
+);
+
+VMOperator(
+	label : int,
+	command : VMCommand
+);
+
+VMCommand ::= Assignment, ConditionOp, Print;
+
+Assignment(
+	varName : string,
+	expr : Expr,
+	goto : [int]
+);
+
+ConditionOp(
+	cond : Condition,
+	gotoThen : [int],
+	gotoElse : [int]
+);
+
+Print(
+	expr : Expr,
+	goto : [int]
+);
+
+BinOp(
+	op : string,
+	lhs : Expr,
+	rhs : Expr
+);
+
+Condition (
+	op : string,
+	lhs : Expr,
+	rhs : Expr
+);
+
+Expr ::= Constant, Variable, App, Upd, BinOp;
+
+Constant (
+	val : int
+);
+
+Variable (
+	name : string
+);
+
+App(
+	firstArg : Expr,
+	secondArg : Expr
+);
+
+Upd(
+	firstArg : Expr,
+	secondArg : Expr,
+	thirdArg : Expr
+);
+
+s2prog(s : string) -> VMProgram{
+	gram = "#include gramm.lingo";
+	parsic(compilePegGrammar(gram), s, defaultPegActions)
+}
+
+setFromgoto(goto : [int], varState : Tree<string, Val>)->Set<ProgramState>{
+	fold(goto, makeSet(), \statesSet, el -> {
+		insertSet(statesSet, State(el, varState));
+	})
+}
+
+printVal(val : Val) -> string{
+	switch(val){
+		IntVal(intVal):
+			i2s(intVal);
+		ArrVal(array):
+		{
+			concatStrings( [ foldTree(array, "[", \index, var, acc->{
+				concatStrings([acc, "\n", "index ", i2s(index), " : ", printVal(var)]);
+			}) , "]"]);
+		}
+	}
+}
+
+printExpr(expr : Expr, varState : Tree<string, Val>) -> string{
+	switch(expr){
+		Constant(val):
+			i2s(val);
+		Variable(name):
+		{
+			switch(lookupTree(varState, name)){
+				None():{
+					println("variable " + name +" doesn't exist");
+					quit(-1);
+					concatStrings(["runtime error"]);
+				}
+				Some(val): {
+					printVal(val);
+				}
+			}
+		}
+		App(firstArg, secondArg): {
+			i2s(either(app(firstArg, either(getInt(secondArg, varState), -1), varState), 0));
+		}
+		Upd(firstArg, secondArg, thirdArg): {
+			printVal(either(upd(Upd(firstArg, secondArg, thirdArg), varState), ArrVal(makeTree())));
+		}
+		BinOp(op, lhs, rhs): {
+			mayBeInt = getInt(expr, varState);
+			i2s(either(mayBeInt, 0));
+		}
+	}
+}
+
+app(arrayExpr: Expr, index : int, varState : Tree<string, Val>) -> Maybe<int> {
+	switch(arrayExpr) {
+		Constant(number):
+			None();
+		Variable(name):
+		{
+			switch(lookupTree(varState, name)){
+				None():{
+					None();
+				}
+				Some(valType): {
+					switch(valType){
+						IntVal(arrayInt) :
+							None();
+						ArrVal(arrayArray):
+						{
+							switch(lookupTree(arrayArray, index)){
+								None():
+									None();
+								Some(arrayEl):
+								{
+									switch(arrayEl){
+										IntVal(el):
+											Some(el);
+										ArrVal(ar):
+											None();	
+									}
+								}	
+							}
+						}
+					}
+				}
+			}
+		}
+		App(firstArg, secondArg):
+			None();
+		Upd(firstArg, secondArg, thirdArg):
+			None();
+		BinOp(op, lhs, rhs):
+			None();
+	}
+}
+
+binOp(left: Maybe<int>, right: Maybe<int>, operation: string) -> Maybe<int> {
+	if(isNone(left) || isNone(right)){
+		None();
+	} else {
+		leftInt = either(left, 0);
+		rightInt = either(right, 0);
+		if(operation == "+"){
+			Some(leftInt + rightInt);
+		} else if(operation == "-"){
+			Some(leftInt - rightInt);
+		} else if(operation == "*"){
+			Some(leftInt * rightInt);
+		} else if(operation == "/"){
+			Some(leftInt / rightInt);
+		} else {
+			Some(leftInt % rightInt);
+		}
+	}
+}
+
+getInt(expr : Expr, varState : Tree<string, Val>) -> Maybe<int> {
+	switch(expr){
+		Constant(number):
+			Some(number);
+		Variable(name):
+		{
+			switch(lookupTree(varState, name)){
+				None():{
+					None();
+				}
+				Some(val): {
+					switch(val){
+						IntVal(el):
+							Some(el);
+						ArrVal(ar):
+							None();
+					}
+				}
+			}
+		}
+		App(firstArg, secondArg):
+		{
+			switch(getInt(secondArg, varState)){
+				None():
+					None();
+				Some(index):
+				{
+					app(firstArg, index, varState);
+				}
+			}
+		}
+		Upd(firstArg, secondArg, thirdArg):
+			None();
+		BinOp(op, lhs, rhs):
+		{
+			left = getInt(lhs, varState);
+			right = getInt(rhs, varState);
+			binOp(left, right, op);
+		}
+	}
+}
+
+checkCond(cond: Condition, varState : Tree<string, Val>) -> bool {
+	left = getInt(cond.lhs, varState);
+	right = getInt(cond.rhs, varState);
+	if(isNone(left) || isNone(right)){
+		false;
+	} else {
+		leftInt = either(left, 0);
+		rightInt = either(right, 0);
+		if(cond.op == "=="){
+			leftInt == rightInt;
+		} else if(cond.op == "!="){
+			(leftInt != rightInt);
+		} else if(cond.op == ">"){
+			(leftInt > rightInt);
+		} else if(cond.op == "<"){
+			(leftInt < rightInt);
+		} else if (cond.op == "<="){
+			(leftInt <= rightInt);
+		} else if(cond.op == ">="){
+			(leftInt >= rightInt);
+		} else {
+			false;
+		}
+	}
+}
+
+assign(varName : string, expr : Expr, varState : Tree<string, Val>)->Tree<string, Val>{
+	maybeVal = lookupTree(varState, varName); 
+	if(isNone(maybeVal)){
+		quit(-1);
+	}
+	val = either(maybeVal, ArrVal(makeTree()));
+	switch(expr){
+		Constant(number): {
+			switch(val){
+				IntVal(prevVal):{
+					setTree(varState, varName, IntVal(number));
+				}
+				ArrVal(array): {
+					println("assign types error");
+					quit(-1);
+					makeTree();
+				}
+			}
+		}
+		Variable(name):
+		{
+			maybeAssignVal = lookupTree(varState, name); 
+			if(isNone(maybeAssignVal)){
+				println("assign types error");
+				quit(-1);
+			}
+			assignVal = either(maybeAssignVal, ArrVal(makeTree()));
+			switch(val){
+				IntVal(prevVal):{
+					switch(assignVal){
+						IntVal(assignIntVal):
+							setTree(varState, varName, IntVal(assignIntVal));
+						ArrVal(assignArray): {
+							println("assign types error");
+							quit(-1);
+							makeTree();
+						}
+					}
+				}
+				ArrVal(array): {
+					switch(assignVal){
+						IntVal(assignIntVal): {
+							println("assign types error");
+							quit(-1);
+							makeTree();
+						}
+						ArrVal(assignArray):
+							setTree(varState, varName, ArrVal(assignArray));
+					}
+				}
+			}
+		}
+		App(firstArg, secondArg):
+		{
+			switch(val){
+				IntVal(intVal) : {
+					switch(getInt(expr, varState)){
+						None():  {
+							println("assign types error");
+							quit(-1);
+							makeTree();
+						}
+						Some(appVal):
+							setTree(varState, varName, IntVal(appVal));
+					}
+				}
+				ArrVal(arrayVal): {
+					println("assign types error");
+					quit(-1);
+					makeTree();
+				}
+			}
+		}
+		Upd(firstArg, secondArg, thirdArg): {
+			switch(val){
+				IntVal(intVal) : {
+					println("assign types error");
+					quit(-1);
+					makeTree();
+				}
+				ArrVal(arrayVal): {
+					switch(upd(Upd(firstArg, secondArg, thirdArg), varState)){
+						None(): {
+							println("assign types error");
+							quit(-1);
+							makeTree();
+						}
+						Some(updArr):
+							setTree(varState, varName, updArr);
+					}
+				}
+			}
+		}
+		BinOp(op, lhs, rhs):
+		{
+			left = getInt(lhs, varState);
+			right = getInt(rhs, varState);
+			switch(binOp(left, right, op)){
+				None():{
+					println("assign types error");
+					quit(-1);
+					makeTree();
+				}
+				Some(binOpRes):{
+				switch(val){
+					IntVal(prevVal):{
+						setTree(varState, varName, IntVal(binOpRes));
+					}
+					ArrVal(array): {
+						println("assign types error");
+						quit(-1);
+						makeTree();
+					}
+				}
+				}	
+			}
+		}
+	}
+}
+
+upd(expr: Upd, varState : Tree<string, Val>)->Maybe<ArrVal> {
+	firstArray = getArray(expr.firstArg, varState);
+	secondIndex = getInt(expr.secondArg, varState);
+	thirdInt = getInt(expr.thirdArg, varState);
+	thirdArray = getArray(expr.thirdArg, varState);
+	if(isNone(firstArray) || isNone(secondIndex)){
+		None();
+	} else if (isNone(thirdInt) && isNone(thirdArray)) {
+		None();
+	} else {
+		arr = either(firstArray, makeTree());
+		index = either(secondIndex, 0);
+		 if(isSome(thirdInt)){
+			 elInt = either(thirdInt, 0);
+			 Some(ArrVal(setTree(arr, index, IntVal(elInt))));
+		 } else{
+			elArr = either(thirdArray, makeTree());
+			Some(ArrVal(setTree(arr, index, ArrVal(elArr))));
+		 }
+	}
+}
+
+getArray(expr : Expr, varState : Tree<string, Val>) -> Maybe<Tree<int, Val>>{
+	switch(expr){
+		Constant(number):{
+			None();
+		}
+		Variable(name):
+		{
+			switch(lookupTree(varState, name)){
+				None():{
+					None();
+				}
+				Some(val): {
+					switch(val){
+						IntVal(el):
+							None();
+						ArrVal(ar):
+							Some(ar);
+					}
+				}
+			}
+		}
+		App(firstArg, secondArg):
+		{
+			None();
+		}
+		Upd(firstArg, secondArg, thirdArg):{
+			switch(upd(Upd(firstArg, secondArg, thirdArg), varState)){
+				None():
+					None();
+				Some(ar):
+					Some(ar.array);	
+			}
+		}	
+		BinOp(op, lhs, rhs):
+		{
+			None();
+		}
+	}
+}
+
+execCommand(command : VMCommand, varState : Tree<string, Val>)->Set<ProgramState>{
+	switch(command){
+		Assignment(varName, expr, goto):
+		{
+			setFromgoto(goto, assign(varName, expr, varState));
+		}
+		ConditionOp(cond, gotoThen, gotoElse):
+		{
+			if(checkCond(cond, varState)){
+				setFromgoto(gotoThen, varState);
+			} else {
+				setFromgoto(gotoElse, varState);
+			}
+		}
+		Print(expr, goto):
+		{
+			println(printExpr(expr, varState));
+			setFromgoto(goto, varState);
+		}
+	}
+}
+
+getNextStates(label : int, varState : Tree<string, Val>, program : VMProgram)->Set<ProgramState>{
+	switch (find(program.operators, \el -> {
+			(el.label == label)
+		} )){
+		None(): {
+			//println("State with label " + i2s(label) + " doesn't exist in program");
+			makeSet1(EmptyState());
+		}
+		Some(val):{
+			execCommand(val.command, varState);			
+		}
+	}
+}
+
+stepCheck(stateSet : Set<ProgramState>){
+	!forall(set2array(stateSet), \state -> {
+		switch(state){
+			EmptyState():
+				true;
+			State(label, varState):
+				false;
+		}
+	})
+}
+
+execVMProgram(program : VMProgram, firstState : ProgramState) -> Set<ProgramState>{
+	for(makeSet1(firstState), stepCheck, \state->{
+		foldSet(state, makeSet(), \newSet, newState -> {
+		switch(newState){
+			EmptyState():
+				newSet;
+			State(label, varState):{
+				mergeSets(newSet, getNextStates(label, varState, program));
+			}
+		}
+	})
+	})
+}
+
+getDefaultVal(type : VarType) -> Val {
+	switch(type){
+		Int() :
+			IntVal(0);
+		ArrayType(elType):
+			ArrVal(makeTree());	
+	}
+}
+
+createDefaultVarStateTree(vmProgram : VMProgram) -> Tree<string, Val>{
+	fold(vmProgram.declarations, makeTree(), 
+	\curTree, curDecl ->{
+		setTree(curTree, curDecl.name, getDefaultVal(curDecl.type))
+	})
+}
+
+main(){
+	vmProgr = s2prog(getFileContent("example.txt"));
+	println(vmProgr);
+	println("now exec..");
+	println("\n");
+	execVMProgram(vmProgr, State(0, createDefaultVarStateTree(vmProgr)));
+}
