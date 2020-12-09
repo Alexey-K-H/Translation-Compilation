@@ -9,6 +9,22 @@ sumArr(arr:[int])-> int{
     fold(arr, 0, \acc, n -> acc + n);
 }
 
+createReduceStr(coeff : int, value : string)->string{
+    if((coeff != 1) && (value != "1")){
+        concatStrings([i2s(coeff), value]);
+    }
+    else if((coeff != 1) && (value == "1")){
+        concatStrings([i2s(coeff)]);
+    }
+    else if((coeff == 1) && (value != "1")){
+        concatStrings([value]);
+    }
+    else{
+        concatStrings([i2s(coeff)]);
+    }
+}
+
+
 main(){
     arr : [int] = [1, 2, 3, 4];
     str : string = arr_to_str(arr);
@@ -17,7 +33,7 @@ main(){
     println("Str:" + str);
 
     sum : int = sumArr(arr);
-    println(sum);
+    println(createReduceStr(1, "1"));
 
     us = render(Text("Hello window!", []));
 }
