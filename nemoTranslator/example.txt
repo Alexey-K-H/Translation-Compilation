@@ -1,0 +1,20 @@
+var v : int;
+var n : int;
+
+n = 10
+v = 5
+
+if(v > n){
+    print(v)
+        while(n < v){
+            n = n + 1
+        }
+} 
+else {
+        print(n)
+            while(n > v){
+                v = v + 1
+            }
+}
+
+print(v - n)
