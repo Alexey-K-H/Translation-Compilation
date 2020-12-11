@@ -26,8 +26,8 @@ main() {
                     s2vnm(getFileContent(file_desc));
                     println(vnmProg2s(vprog));
                     //Запускаем вирт машину
+                    println("Result of programm:");
                     runVnemo(vprog, NmState(makeTree()));
-                    println(vprog);
                 }
                 None(): { }
             }

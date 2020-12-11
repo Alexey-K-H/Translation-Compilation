@@ -1055,8 +1055,8 @@
 79889 main$1
 79951 main$2
 79991 main$1
-80233 main
-80284 main$init
+80268 main
+80319 main$init
 
 0 C:\flow9\lib\ds\tuples.flow 7 1
 39 C:\flow9\lib\ds\tuples.flow 3 1
@@ -8343,7 +8343,7 @@
 80039 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 20 20
 80044 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 20 20
 80055 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 20 20
-80086 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 32 24
+80086 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 33 24
 80092 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 21 16
 80107 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 23 32
 80112 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 23 52
@@ -8359,16 +8359,16 @@
 80179 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 27 28
 80185 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 27 20
 80192 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 29 20
-80197 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 29 44
-80208 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 29 20
-80215 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 30 20
-80220 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 30 20
-80231 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 19 2
-80243 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 37 9
-80268 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 38 1
-80273 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 38 1
-80283 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 39 0
-80308 --end-- 0 -1
+80232 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 29 20
+80239 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 30 20
+80244 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 30 44
+80255 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 30 20
+80266 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 19 2
+80278 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 38 9
+80303 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 39 1
+80308 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 39 1
+80318 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 40 0
+80343 --end-- 0 -1
 
 L 4690 1 0 i
 L 4726 1 0 f
