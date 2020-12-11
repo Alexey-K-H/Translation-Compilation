@@ -415,7 +415,7 @@ tranlsateNeMoProgram(program : NeMoProgram, fileToWritePath : string) -> bool {
 
 
 main(){
-	progr = s2prog(getFileContent("example.txt"));
+	progr = s2prog(getFileContent("example2.txt"));
 	println(progr);
 	println("start types checking...\n");
 	if(checkTypes(progr)){

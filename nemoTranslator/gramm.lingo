@@ -33,7 +33,7 @@ If = ws "if" ws "("  ws Expr:lhs ws comparison $s ws Expr:rhs ws ")" ws Operator
 
 While = ws "while" ws "("  ws Expr:lhs ws comparison $s ws Expr:rhs ws  ")" ws Operators:operators {createWhile(:lhs, $s, :rhs, :operators)};
 
-Assignment = ws var:varName ws "=" ws Expr:expr ws {Assignment(:varName, :expr)};
+Assignment = ws var:varName ws ":=" ws Expr:expr ws {Assignment(:varName, :expr)};
 
 Expr = App | Upd | BinOp | BinOp:lhs ws operation $s ws BinOp:rhs ws { BinOp($s, :lhs, :rhs)} | endExpr;
 App = "app" ws "(" ws Expr:first "," ws Expr:second ws ")" {App(:first, :second)};

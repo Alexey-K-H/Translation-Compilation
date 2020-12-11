@@ -761,53 +761,53 @@
 60105 decl2s$init
 60110 s2prog$init
 60126 s2prog
-62307 s2prog$1
-62479 s2prog
-62529 s2prog$2
-62685 s2prog
-62738 s2prog$init
-62743 translateOperator$init
-62770 translateOperator
-63052 translateOperator$1
-63235 translateOperator
-63270 translateOperator$2
-63306 translateOperator
-63454 translateOperator$3
-63494 translateOperator
-63637 translateOperator$4
-63778 translateOperator
-64461 translateOperator$5
-64487 translateOperator
-64751 translateOperator$init
-64756 getExprType$init
-64777 getExprType
-65385 getExprType$init
-65390 tranlsateNeMoProgram$init
-65420 tranlsateNeMoProgram
-65482 tranlsateNeMoProgram$1
-65508 tranlsateNeMoProgram
-65550 tranlsateNeMoProgram$init
-65555 checkOperator$init
-65578 checkOperator
-65890 checkOperator$1
-65916 checkOperator
-65936 checkOperator$2
-65954 checkOperator
-66083 checkOperator$3
-66109 checkOperator
-66129 checkOperator$4
-66147 checkOperator
-66398 checkOperator$init
-66403 checkTypes$init
-66423 checkTypes
-66452 checkTypes$1
-66478 checkTypes
-66498 checkTypes$2
-66516 checkTypes
-66532 checkTypes$init
-66537 main$init
-66551 main
-66941 main$init
+62308 s2prog$1
+62480 s2prog
+62530 s2prog$2
+62686 s2prog
+62739 s2prog$init
+62744 translateOperator$init
+62771 translateOperator
+63053 translateOperator$1
+63236 translateOperator
+63271 translateOperator$2
+63307 translateOperator
+63455 translateOperator$3
+63495 translateOperator
+63638 translateOperator$4
+63779 translateOperator
+64462 translateOperator$5
+64488 translateOperator
+64752 translateOperator$init
+64757 getExprType$init
+64778 getExprType
+65386 getExprType$init
+65391 tranlsateNeMoProgram$init
+65421 tranlsateNeMoProgram
+65483 tranlsateNeMoProgram$1
+65509 tranlsateNeMoProgram
+65551 tranlsateNeMoProgram$init
+65556 checkOperator$init
+65579 checkOperator
+65891 checkOperator$1
+65917 checkOperator
+65937 checkOperator$2
+65955 checkOperator
+66084 checkOperator$3
+66110 checkOperator
+66130 checkOperator$4
+66148 checkOperator
+66399 checkOperator$init
+66404 checkTypes$init
+66424 checkTypes
+66453 checkTypes$1
+66479 checkTypes
+66499 checkTypes$2
+66517 checkTypes
+66533 checkTypes$init
+66538 main$init
+66552 main
+66944 main$init
 
 0 C:\flow9\lib\ds\tuples.flow 7 1
 39 C:\flow9\lib\ds\tuples.flow 3 1
@@ -6547,435 +6547,435 @@
 60110 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 110 0
 60126 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 111 1
 60135 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 111 8
-62274 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 112 14
-62284 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 112 43
-62302 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 113 1
-62316 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 114 15
-62321 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 114 56
-62327 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 114 44
-62333 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 114 61
-62340 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 114 15
-62351 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 115 39
-62356 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 115 44
-62362 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 115 48
-62367 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 115 53
-62373 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 115 57
-62378 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 115 62
-62389 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 115 67
-62394 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 115 72
-62410 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 116 39
-62415 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 116 44
-62421 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 116 48
-62426 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 116 53
-62432 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 116 57
-62447 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 116 79
-62452 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 116 84
-62484 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 112 14
-62495 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 118 17
-62500 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 118 37
-62524 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 119 1
-62538 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 120 15
-62543 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 120 56
-62549 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 120 44
-62555 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 120 61
-62562 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 120 15
-62573 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 121 54
-62578 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 121 59
-62584 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 121 63
-62589 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 121 68
-62595 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 121 72
-62600 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 121 77
-62611 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 121 82
-62616 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 121 87
-62637 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 122 10
-62642 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 122 15
-62648 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 122 19
-62653 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 122 24
-62659 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 122 28
-62690 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 118 17
-62701 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 124 1
-62706 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 124 8
-62712 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 124 33
-62717 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 124 52
-62727 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 124 1
-62737 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 125 0
-62743 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 325 0
-62770 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 326 1
-62779 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 326 8
-62842 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 327 2
-62857 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 327 2
-62872 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 328 15
-62882 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 328 47
-62893 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 329 30
-62903 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 329 30
-62909 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 329 67
-62916 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 329 74
-62922 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 329 84
-62931 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 329 92
-62936 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 329 92
-62943 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 329 107
-62960 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 329 119
-62965 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 329 119
-62972 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 329 136
-62986 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 330 19
-62996 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 330 57
-63002 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 330 83
-63017 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 348 2
-63032 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 349 16
-63037 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 349 32
-63042 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 350 4
-63061 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 351 8
-63066 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 351 8
-63072 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 351 33
-63083 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 352 21
-63088 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 352 67
-63090 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 352 71
-63100 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 352 103
-63111 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 352 21
-63122 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 353 6
-63127 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 353 29
-63137 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 353 6
-63148 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 355 21
-63153 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 355 67
-63155 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 355 71
-63160 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 355 85
-63165 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 355 85
-63171 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 355 107
-63191 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 355 121
-63202 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 355 21
-63213 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 356 6
-63218 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 356 29
-63228 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 356 6
-63244 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 349 16
-63255 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 359 21
-63260 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 359 38
-63265 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 360 4
-63279 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 361 5
-63284 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 361 23
-63299 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 361 5
-63311 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 359 21
-63322 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 363 31
-63332 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 363 31
-63338 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 363 68
-63389 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 364 4
-63399 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 364 40
-63405 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 364 4
-63412 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 364 45
-63419 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 365 4
-63424 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 365 31
-63429 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 365 31
-63435 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 365 57
-63441 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 365 9
-63447 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 365 61
-63449 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 365 65
-63463 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 366 5
-63468 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 366 17
-63473 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 366 29
-63479 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 366 17
-63486 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 366 34
-63499 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 365 4
-63506 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 367 9
-63546 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 368 27
-63551 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 368 44
-63556 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 368 44
-63562 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 368 65
-63568 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 368 27
-63579 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 369 15
-63584 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 369 26
-63589 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 369 26
-63595 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 369 47
-63620 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 370 25
-63625 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 370 53
-63627 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 371 3
-63646 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 372 4
-63651 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 372 16
-63662 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 372 40
-63672 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 372 40
-63679 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 372 63
-63730 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 372 92
-63735 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 372 92
-63742 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 372 109
-63787 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 370 25
-63798 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 374 19
-63808 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 374 57
-63814 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 375 5
-63820 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 375 27
-63825 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 375 38
-63830 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 375 38
-63836 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 375 59
-63863 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 375 78
-63878 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 377 2
-63893 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 378 15
-63903 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 378 47
-63914 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 379 39
-63919 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 380 32
-63921 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 380 36
-63931 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 379 39
-63942 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 381 38
-63952 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 381 38
-63958 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 381 75
-64005 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 381 102
-64010 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 381 102
-64017 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 382 5
-64024 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 382 12
-64034 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 382 61
-64040 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 382 12
-64047 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 382 66
-64087 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 383 18
-64097 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 383 18
-64103 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 383 68
-64150 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 383 95
-64160 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 383 95
-64167 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 384 5
-64207 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 385 19
-64217 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 385 57
-64223 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 385 92
-64234 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 385 143
-64240 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 386 7
-64250 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 386 52
-64266 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 338 2
-64281 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 339 15
-64291 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 339 47
-64302 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 340 25
-64312 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 340 25
-64318 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 340 62
-64325 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 340 69
-64340 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 340 80
-64345 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 340 80
-64352 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 340 95
-64357 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 340 101
-64374 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 340 113
-64379 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 340 113
-64386 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 340 130
-64400 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 341 19
-64410 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 341 57
-64416 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 341 78
-64431 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 343 2
-64446 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 344 3
-64451 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 344 19
-64456 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 344 41
-64470 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 345 4
-64475 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 345 34
-64480 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 345 4
-64492 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 344 3
-64507 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 332 2
-64522 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 332 2
-64537 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 332 2
-64552 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 333 15
-64562 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 333 47
-64573 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 334 24
-64583 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 334 24
-64589 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 334 61
-64596 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 334 68
-64605 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 334 76
-64610 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 334 76
-64617 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 334 90
-64623 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 334 102
-64628 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 334 102
-64635 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 334 116
-64652 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 335 5
-64669 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 335 17
-64674 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 335 17
-64681 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 335 34
-64688 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 335 41
-64724 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 336 19
-64734 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 336 57
-64740 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 336 77
-64750 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 387 0
-64756 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 226 0
-64777 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 227 1
-64786 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 227 8
-64841 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 245 2
-64856 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 245 2
-64871 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 246 18
-64876 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 246 40
-64881 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 246 18
-64892 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 247 19
-64897 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 247 42
-64902 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 247 19
-64913 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 248 3
-64918 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 248 31
-64923 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 248 3
-64938 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 234 2
-64953 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 234 2
-64968 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 234 2
-64983 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 235 14
-64988 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 235 31
-64993 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 235 14
-65004 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 236 15
-65009 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 236 32
-65014 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 236 15
-65025 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 237 6
-65030 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 237 35
-65035 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 237 6
-65046 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 238 4
-65056 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 240 4
-65122 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 240 49
-65127 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 240 49
-65134 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 240 71
-65140 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 240 76
-65145 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 240 76
-65152 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 240 4
-65159 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 241 4
-65164 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 241 4
-65171 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 242 4
-65181 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 228 2
-65196 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 229 3
-65206 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 250 2
-65221 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 250 2
-65236 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 250 2
-65251 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 251 15
-65256 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 251 34
-65261 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 251 15
-65272 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 252 16
-65277 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 252 36
-65282 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 252 16
-65293 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 253 15
-65298 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 253 34
-65303 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 253 15
-65314 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 254 3
-65319 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 254 28
-65324 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 254 40
-65329 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 254 3
-65344 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 231 2
-65359 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 232 3
-65364 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 232 25
-65374 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 232 3
-65384 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 255 0
-65390 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 406 0
-65420 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 407 1
-65429 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 407 1
-65434 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 408 1
-65444 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 408 1
-65450 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 408 32
-65455 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 409 1
-65465 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 409 41
-65467 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 409 45
-65477 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 410 1
-65491 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 411 2
-65496 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 411 30
-65501 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 411 2
-65513 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 409 1
-65539 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 407 1
-65549 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 412 0
-65555 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 259 0
-65578 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 260 1
-65587 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 260 8
-65650 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 261 2
-65665 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 261 2
-65680 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 262 13
-65685 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 262 38
-65695 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 262 13
-65706 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 263 14
-65711 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 263 32
-65716 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 263 14
-65727 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 264 6
-65732 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 264 34
-65737 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 264 6
-65748 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 265 4
-65755 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 267 4
-65801 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 267 58
-65806 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 267 58
-65813 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 267 79
-65822 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 267 87
-65827 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 267 87
-65834 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 267 4
-65841 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 268 4
-65846 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 268 4
-65853 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 269 4
-65860 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 290 2
-65875 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 291 3
-65880 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 291 25
-65899 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 291 41
-65904 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 291 67
-65909 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 291 41
-65925 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 291 10
-65931 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 291 80
-65945 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 291 87
-65950 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 291 93
-65959 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 291 3
-65974 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 293 2
-65989 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 294 3
-65994 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 294 36
-65999 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 294 3
-66014 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 283 2
-66029 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 284 3
-66034 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 284 21
-66039 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 284 3
-66046 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 285 3
-66053 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 287 2
-66068 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 288 3
-66073 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 288 25
-66092 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 288 41
-66097 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 288 67
-66102 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 288 41
-66118 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 288 10
-66124 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 288 80
-66138 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 288 87
-66143 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 288 93
-66152 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 288 3
-66167 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 272 2
-66182 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 272 2
-66197 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 272 2
-66212 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 273 13
-66217 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 273 30
-66222 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 273 13
-66233 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 274 13
-66238 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 274 30
-66243 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 274 13
-66254 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 275 6
-66259 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 275 34
-66264 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 275 6
-66275 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 276 4
-66282 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 278 4
-66336 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 278 43
-66341 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 278 43
-66348 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 278 64
-66353 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 278 70
-66359 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 278 82
-66364 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 278 88
-66369 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 278 88
-66376 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 278 4
-66383 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 279 4
-66388 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 279 4
-66395 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 280 4
-66397 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 295 0
-66403 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 299 0
-66423 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 300 1
-66432 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 300 1
-66442 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 300 32
-66461 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 301 2
-66466 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 301 26
-66471 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 301 2
-66487 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 300 9
-66493 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 302 5
-66507 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 302 12
-66512 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 302 16
-66521 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 300 1
-66531 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 303 0
-66537 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 417 0
-66551 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 418 1
-66560 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 418 9
-66584 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 418 16
-66590 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 418 9
-66601 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 419 1
-66606 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 419 1
-66613 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 420 1
-66663 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 420 1
-66670 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 421 4
-66675 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 421 4
-66686 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 422 2
-66730 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 422 2
-66737 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 423 2
-66781 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 423 2
-66788 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 424 2
-66793 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 424 38
-66833 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 424 10
-66839 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 424 2
-66854 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 426 2
-66930 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 426 2
-66940 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 427 0
-66965 --end-- 0 -1
+62275 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 112 14
+62285 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 112 43
+62303 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 113 1
+62317 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 114 15
+62322 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 114 56
+62328 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 114 44
+62334 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 114 61
+62341 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 114 15
+62352 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 115 39
+62357 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 115 44
+62363 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 115 48
+62368 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 115 53
+62374 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 115 57
+62379 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 115 62
+62390 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 115 67
+62395 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 115 72
+62411 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 116 39
+62416 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 116 44
+62422 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 116 48
+62427 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 116 53
+62433 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 116 57
+62448 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 116 79
+62453 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 116 84
+62485 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 112 14
+62496 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 118 17
+62501 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 118 37
+62525 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 119 1
+62539 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 120 15
+62544 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 120 56
+62550 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 120 44
+62556 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 120 61
+62563 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 120 15
+62574 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 121 54
+62579 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 121 59
+62585 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 121 63
+62590 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 121 68
+62596 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 121 72
+62601 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 121 77
+62612 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 121 82
+62617 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 121 87
+62638 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 122 10
+62643 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 122 15
+62649 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 122 19
+62654 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 122 24
+62660 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 122 28
+62691 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 118 17
+62702 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 124 1
+62707 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 124 8
+62713 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 124 33
+62718 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 124 52
+62728 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 124 1
+62738 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 125 0
+62744 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 325 0
+62771 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 326 1
+62780 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 326 8
+62843 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 327 2
+62858 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 327 2
+62873 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 328 15
+62883 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 328 47
+62894 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 329 30
+62904 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 329 30
+62910 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 329 67
+62917 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 329 74
+62923 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 329 84
+62932 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 329 92
+62937 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 329 92
+62944 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 329 107
+62961 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 329 119
+62966 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 329 119
+62973 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 329 136
+62987 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 330 19
+62997 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 330 57
+63003 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 330 83
+63018 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 348 2
+63033 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 349 16
+63038 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 349 32
+63043 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 350 4
+63062 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 351 8
+63067 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 351 8
+63073 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 351 33
+63084 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 352 21
+63089 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 352 67
+63091 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 352 71
+63101 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 352 103
+63112 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 352 21
+63123 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 353 6
+63128 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 353 29
+63138 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 353 6
+63149 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 355 21
+63154 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 355 67
+63156 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 355 71
+63161 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 355 85
+63166 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 355 85
+63172 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 355 107
+63192 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 355 121
+63203 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 355 21
+63214 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 356 6
+63219 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 356 29
+63229 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 356 6
+63245 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 349 16
+63256 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 359 21
+63261 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 359 38
+63266 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 360 4
+63280 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 361 5
+63285 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 361 23
+63300 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 361 5
+63312 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 359 21
+63323 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 363 31
+63333 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 363 31
+63339 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 363 68
+63390 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 364 4
+63400 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 364 40
+63406 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 364 4
+63413 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 364 45
+63420 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 365 4
+63425 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 365 31
+63430 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 365 31
+63436 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 365 57
+63442 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 365 9
+63448 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 365 61
+63450 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 365 65
+63464 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 366 5
+63469 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 366 17
+63474 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 366 29
+63480 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 366 17
+63487 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 366 34
+63500 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 365 4
+63507 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 367 9
+63547 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 368 27
+63552 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 368 44
+63557 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 368 44
+63563 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 368 65
+63569 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 368 27
+63580 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 369 15
+63585 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 369 26
+63590 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 369 26
+63596 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 369 47
+63621 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 370 25
+63626 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 370 53
+63628 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 371 3
+63647 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 372 4
+63652 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 372 16
+63663 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 372 40
+63673 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 372 40
+63680 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 372 63
+63731 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 372 92
+63736 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 372 92
+63743 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 372 109
+63788 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 370 25
+63799 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 374 19
+63809 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 374 57
+63815 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 375 5
+63821 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 375 27
+63826 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 375 38
+63831 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 375 38
+63837 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 375 59
+63864 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 375 78
+63879 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 377 2
+63894 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 378 15
+63904 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 378 47
+63915 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 379 39
+63920 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 380 32
+63922 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 380 36
+63932 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 379 39
+63943 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 381 38
+63953 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 381 38
+63959 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 381 75
+64006 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 381 102
+64011 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 381 102
+64018 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 382 5
+64025 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 382 12
+64035 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 382 61
+64041 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 382 12
+64048 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 382 66
+64088 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 383 18
+64098 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 383 18
+64104 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 383 68
+64151 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 383 95
+64161 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 383 95
+64168 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 384 5
+64208 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 385 19
+64218 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 385 57
+64224 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 385 92
+64235 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 385 143
+64241 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 386 7
+64251 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 386 52
+64267 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 338 2
+64282 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 339 15
+64292 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 339 47
+64303 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 340 25
+64313 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 340 25
+64319 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 340 62
+64326 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 340 69
+64341 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 340 80
+64346 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 340 80
+64353 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 340 95
+64358 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 340 101
+64375 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 340 113
+64380 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 340 113
+64387 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 340 130
+64401 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 341 19
+64411 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 341 57
+64417 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 341 78
+64432 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 343 2
+64447 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 344 3
+64452 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 344 19
+64457 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 344 41
+64471 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 345 4
+64476 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 345 34
+64481 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 345 4
+64493 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 344 3
+64508 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 332 2
+64523 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 332 2
+64538 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 332 2
+64553 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 333 15
+64563 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 333 47
+64574 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 334 24
+64584 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 334 24
+64590 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 334 61
+64597 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 334 68
+64606 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 334 76
+64611 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 334 76
+64618 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 334 90
+64624 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 334 102
+64629 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 334 102
+64636 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 334 116
+64653 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 335 5
+64670 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 335 17
+64675 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 335 17
+64682 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 335 34
+64689 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 335 41
+64725 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 336 19
+64735 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 336 57
+64741 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 336 77
+64751 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 387 0
+64757 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 226 0
+64778 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 227 1
+64787 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 227 8
+64842 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 245 2
+64857 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 245 2
+64872 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 246 18
+64877 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 246 40
+64882 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 246 18
+64893 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 247 19
+64898 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 247 42
+64903 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 247 19
+64914 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 248 3
+64919 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 248 31
+64924 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 248 3
+64939 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 234 2
+64954 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 234 2
+64969 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 234 2
+64984 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 235 14
+64989 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 235 31
+64994 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 235 14
+65005 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 236 15
+65010 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 236 32
+65015 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 236 15
+65026 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 237 6
+65031 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 237 35
+65036 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 237 6
+65047 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 238 4
+65057 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 240 4
+65123 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 240 49
+65128 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 240 49
+65135 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 240 71
+65141 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 240 76
+65146 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 240 76
+65153 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 240 4
+65160 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 241 4
+65165 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 241 4
+65172 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 242 4
+65182 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 228 2
+65197 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 229 3
+65207 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 250 2
+65222 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 250 2
+65237 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 250 2
+65252 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 251 15
+65257 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 251 34
+65262 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 251 15
+65273 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 252 16
+65278 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 252 36
+65283 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 252 16
+65294 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 253 15
+65299 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 253 34
+65304 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 253 15
+65315 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 254 3
+65320 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 254 28
+65325 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 254 40
+65330 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 254 3
+65345 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 231 2
+65360 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 232 3
+65365 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 232 25
+65375 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 232 3
+65385 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 255 0
+65391 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 406 0
+65421 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 407 1
+65430 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 407 1
+65435 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 408 1
+65445 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 408 1
+65451 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 408 32
+65456 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 409 1
+65466 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 409 41
+65468 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 409 45
+65478 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 410 1
+65492 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 411 2
+65497 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 411 30
+65502 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 411 2
+65514 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 409 1
+65540 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 407 1
+65550 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 412 0
+65556 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 259 0
+65579 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 260 1
+65588 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 260 8
+65651 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 261 2
+65666 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 261 2
+65681 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 262 13
+65686 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 262 38
+65696 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 262 13
+65707 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 263 14
+65712 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 263 32
+65717 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 263 14
+65728 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 264 6
+65733 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 264 34
+65738 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 264 6
+65749 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 265 4
+65756 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 267 4
+65802 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 267 58
+65807 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 267 58
+65814 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 267 79
+65823 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 267 87
+65828 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 267 87
+65835 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 267 4
+65842 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 268 4
+65847 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 268 4
+65854 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 269 4
+65861 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 290 2
+65876 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 291 3
+65881 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 291 25
+65900 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 291 41
+65905 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 291 67
+65910 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 291 41
+65926 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 291 10
+65932 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 291 80
+65946 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 291 87
+65951 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 291 93
+65960 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 291 3
+65975 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 293 2
+65990 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 294 3
+65995 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 294 36
+66000 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 294 3
+66015 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 283 2
+66030 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 284 3
+66035 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 284 21
+66040 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 284 3
+66047 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 285 3
+66054 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 287 2
+66069 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 288 3
+66074 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 288 25
+66093 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 288 41
+66098 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 288 67
+66103 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 288 41
+66119 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 288 10
+66125 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 288 80
+66139 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 288 87
+66144 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 288 93
+66153 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 288 3
+66168 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 272 2
+66183 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 272 2
+66198 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 272 2
+66213 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 273 13
+66218 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 273 30
+66223 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 273 13
+66234 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 274 13
+66239 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 274 30
+66244 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 274 13
+66255 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 275 6
+66260 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 275 34
+66265 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 275 6
+66276 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 276 4
+66283 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 278 4
+66337 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 278 43
+66342 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 278 43
+66349 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 278 64
+66354 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 278 70
+66360 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 278 82
+66365 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 278 88
+66370 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 278 88
+66377 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 278 4
+66384 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 279 4
+66389 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 279 4
+66396 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 280 4
+66398 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 295 0
+66404 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 299 0
+66424 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 300 1
+66433 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 300 1
+66443 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 300 32
+66462 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 301 2
+66467 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 301 26
+66472 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 301 2
+66488 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 300 9
+66494 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 302 5
+66508 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 302 12
+66513 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 302 16
+66522 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 300 1
+66532 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 303 0
+66538 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 417 0
+66552 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 418 1
+66561 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 418 9
+66587 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 418 16
+66593 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 418 9
+66604 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 419 1
+66609 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 419 1
+66616 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 420 1
+66666 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 420 1
+66673 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 421 4
+66678 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 421 4
+66689 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 422 2
+66733 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 422 2
+66740 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 423 2
+66784 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 423 2
+66791 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 424 2
+66796 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 424 38
+66836 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 424 10
+66842 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 424 2
+66857 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 426 2
+66933 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 426 2
+66943 C:\flow9\???\Translation-Compilation\nemoTranslator\NeMo.flow 427 0
+66968 --end-- 0 -1
 
 L 4416 1 0 i
 L 4452 1 0 f
@@ -7995,89 +7995,89 @@ L 60126 0 1 gram
 L 60126 0 2 treeWithIf
 L 60126 0 3 treeWithWhile
 L 60126 1 0 s
-L 62307 0 1 comparison
-L 62307 1 0 args
-L 62529 0 1 comparison
-L 62529 1 0 args
-L 62770 0 2 varName
-L 62770 0 3 expr
-L 62770 0 4 nextLabel
-L 62770 0 5 translatedAssignmentText
-L 62770 0 6 operators
-L 62770 0 7 stepsArray
-L 62770 0 8 nextLabelsArray
-L 62770 0 9 translatedNonDetermChoice
-L 62770 0 10 stepsWithoutLastArray
-L 62770 0 11 lastLabel
-L 62770 0 12 translatedOperators
-L 62770 0 13 iterationOperator
-L 62770 0 14 translationStepOperatorTranslated
-L 62770 0 15 translatedNonDetermIterationText
-L 62770 0 16 translatedIf
-L 62770 0 17 translatedPrintText
-L 62770 0 18 lhs
-L 62770 0 19 rhs
-L 62770 0 20 condition
-L 62770 0 21 translatedTestText
-L 62770 1 0 operator
-L 62770 1 1 beginTranslationStep
-L 63052 0 2 operatorStep
-L 63052 1 0 curStepsArray
-L 63052 1 1 elOperator
-L 63052 2 0 beginTranslationStep
-L 63270 1 0 curArray
-L 63270 1 1 step
-L 63454 1 0 curString
-L 63454 1 1 label
-L 63637 1 0 curString
-L 63637 1 1 elStep
-L 63637 2 0 lastLabel
-L 64461 1 0 curStep
-L 64461 1 1 elOperator
-L 64777 0 2 firstArg
-L 64777 0 3 secondArg
-L 64777 0 4 firstArgType
-L 64777 0 5 secondArgType
-L 64777 0 6 op
-L 64777 0 7 lhs
-L 64777 0 8 rhs
-L 64777 0 9 leftType
-L 64777 0 10 rightType
-L 64777 0 11 val
-L 64777 0 12 first
-L 64777 0 13 second
-L 64777 0 14 third
-L 64777 0 15 firstType
-L 64777 0 16 secondType
-L 64777 0 17 thirdType
-L 64777 0 18 name
-L 64777 1 0 expr
-L 64777 1 1 program
-L 65420 1 0 program
-L 65420 1 1 fileToWritePath
-L 65482 1 0 curTranslationStep
-L 65482 1 1 operator
-L 65578 0 2 varName
-L 65578 0 3 expr
-L 65578 0 4 varType
-L 65578 0 5 exprType
-L 65578 0 6 operators
-L 65578 0 7 iterationOperator
-L 65578 0 8 lhs
-L 65578 0 9 rhs
-L 65578 0 10 condition
-L 65578 0 11 lhsType
-L 65578 0 12 rhsType
-L 65578 1 0 operator
-L 65578 1 1 program
-L 65890 1 0 operatorEl
-L 65890 2 0 program
-L 65936 1 0 el
-L 66083 1 0 operatorEl
-L 66083 2 0 program
-L 66129 1 0 el
-L 66423 1 0 program
-L 66452 1 0 operator
-L 66452 2 0 program
-L 66498 1 0 el
-L 66551 0 0 progr
+L 62308 0 1 comparison
+L 62308 1 0 args
+L 62530 0 1 comparison
+L 62530 1 0 args
+L 62771 0 2 varName
+L 62771 0 3 expr
+L 62771 0 4 nextLabel
+L 62771 0 5 translatedAssignmentText
+L 62771 0 6 operators
+L 62771 0 7 stepsArray
+L 62771 0 8 nextLabelsArray
+L 62771 0 9 translatedNonDetermChoice
+L 62771 0 10 stepsWithoutLastArray
+L 62771 0 11 lastLabel
+L 62771 0 12 translatedOperators
+L 62771 0 13 iterationOperator
+L 62771 0 14 translationStepOperatorTranslated
+L 62771 0 15 translatedNonDetermIterationText
+L 62771 0 16 translatedIf
+L 62771 0 17 translatedPrintText
+L 62771 0 18 lhs
+L 62771 0 19 rhs
+L 62771 0 20 condition
+L 62771 0 21 translatedTestText
+L 62771 1 0 operator
+L 62771 1 1 beginTranslationStep
+L 63053 0 2 operatorStep
+L 63053 1 0 curStepsArray
+L 63053 1 1 elOperator
+L 63053 2 0 beginTranslationStep
+L 63271 1 0 curArray
+L 63271 1 1 step
+L 63455 1 0 curString
+L 63455 1 1 label
+L 63638 1 0 curString
+L 63638 1 1 elStep
+L 63638 2 0 lastLabel
+L 64462 1 0 curStep
+L 64462 1 1 elOperator
+L 64778 0 2 firstArg
+L 64778 0 3 secondArg
+L 64778 0 4 firstArgType
+L 64778 0 5 secondArgType
+L 64778 0 6 op
+L 64778 0 7 lhs
+L 64778 0 8 rhs
+L 64778 0 9 leftType
+L 64778 0 10 rightType
+L 64778 0 11 val
+L 64778 0 12 first
+L 64778 0 13 second
+L 64778 0 14 third
+L 64778 0 15 firstType
+L 64778 0 16 secondType
+L 64778 0 17 thirdType
+L 64778 0 18 name
+L 64778 1 0 expr
+L 64778 1 1 program
+L 65421 1 0 program
+L 65421 1 1 fileToWritePath
+L 65483 1 0 curTranslationStep
+L 65483 1 1 operator
+L 65579 0 2 varName
+L 65579 0 3 expr
+L 65579 0 4 varType
+L 65579 0 5 exprType
+L 65579 0 6 operators
+L 65579 0 7 iterationOperator
+L 65579 0 8 lhs
+L 65579 0 9 rhs
+L 65579 0 10 condition
+L 65579 0 11 lhsType
+L 65579 0 12 rhsType
+L 65579 1 0 operator
+L 65579 1 1 program
+L 65891 1 0 operatorEl
+L 65891 2 0 program
+L 65937 1 0 el
+L 66084 1 0 operatorEl
+L 66084 2 0 program
+L 66130 1 0 el
+L 66424 1 0 program
+L 66453 1 0 operator
+L 66453 2 0 program
+L 66499 1 0 el
+L 66552 0 0 progr
