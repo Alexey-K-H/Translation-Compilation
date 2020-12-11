@@ -1,0 +1,29 @@
+import nemo_ast;
+import nemo_typecheck;
+
+main() {
+	proc = \file -> {
+		src = getFileContent(file);
+		//Преобразование в немо
+		prog = s2nm(src);
+		err_count = ref 0;
+		
+		// Подсчет количества ошибок
+		err = \msg -> {
+			err_count := ^err_count + 1;
+			println(msg)
+		}
+	
+		typecheckNmProgram(prog, err);
+		if (^err_count == 0) {
+            println("Everything is alright!");
+			println("nemo prog " + file + ":");
+			println(nmProg2s(prog));
+			println("prog");
+			println(prog);
+		}
+	}
+	
+	fname = "test.txt";
+	proc(fname);
+}
