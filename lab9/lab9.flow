@@ -475,14 +475,17 @@ PdobnRat2s(rf:RatFunc)->string{
 
 //Вывод полниома после приведения подобных в виде строки
 createReducePodobn(value: string, coeff: int)->string{
-    if((coeff != 1) && (value != "1")){
+    if((coeff != 1) && (coeff != -1) && (value != "1")){
         concatStrings([i2s(coeff), "*", value]);
     }
-    else if((coeff != 1) && (value == "1")){
+    else if((coeff != 1) && (coeff != -1) && (value == "1")){
         concatStrings([i2s(coeff)]);
     }
     else if((coeff == 1) && (value != "1")){
         concatStrings([value]);
+    }
+    else if((coeff == -1) && (value != "1")){
+        concatStrings(["-", value]);
     }
     else{
         concatStrings([i2s(coeff)]);
@@ -781,7 +784,7 @@ executeStr(str : string){
 // }
 
 main(){
-    str27 = "(((2*x)-y)*((2*x)+y))";
+    str27 = "((x/-x)+(-y/x))";
 
     //Преобразование в рациональную функцию + упрощение
     executeStr(str27);
