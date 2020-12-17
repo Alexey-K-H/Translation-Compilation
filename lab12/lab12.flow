@@ -602,8 +602,7 @@ runVnemo(prog : VNmProg, init : NmState) -> void {
 	)
 }
 
-main() {
-    proc = \file -> {
+execute(file : string){
 		src = getFileContent(file);
 		//Преобразование в немо
 		prog = s2nm(src);
@@ -632,8 +631,9 @@ main() {
                 None(): { }
             }
 		}
-	}
+}
 
-	fname = "test1.txt";
-	proc(fname);
+main() {
+	fname = "test2.nm";
+	execute(fname);
 }

@@ -2,7 +2,7 @@ var n : int;
 var x : int;
 var y : int;
 {
-	x := 20 ; 
+	x := 22 ; 
 	y := 15 ;
 	*{
 		{ (x > y) ? ; x := (x - y) } U

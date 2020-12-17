@@ -1050,13 +1050,14 @@
 79818 runVnemo$4
 79834 runVnemo
 79856 runVnemo$init
-79861 main$init
-79875 main
-79889 main$1
-79951 main$2
-79991 main$1
-80268 main
-80319 main$init
+79861 execute$init
+79878 execute
+79940 execute$1
+79980 execute
+80261 execute$init
+80266 main$init
+80280 main
+80328 main$init
 
 0 C:\flow9\lib\ds\tuples.flow 7 1
 39 C:\flow9\lib\ds\tuples.flow 3 1
@@ -8322,53 +8323,55 @@
 79854 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 596 1
 79855 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 597 0
 79861 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 605 0
-79875 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 606 4
-79884 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 606 11
-79898 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 607 8
-79903 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 607 8
-79914 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 609 9
-79919 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 609 9
-79930 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 610 18
-79941 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 613 8
-79960 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 614 3
-79965 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 614 17
-79971 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 614 29
-79979 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 615 3
-79984 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 615 3
-80005 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 618 2
-80010 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 618 27
-80015 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 618 2
-80022 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 619 7
+79878 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 606 2
+79887 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 606 8
+79892 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 606 8
+79903 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 608 9
+79908 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 608 9
+79919 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 609 18
+79930 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 612 8
+79949 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 613 3
+79954 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 613 17
+79960 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 613 29
+79968 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 614 3
+79973 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 614 3
+79994 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 617 2
+79999 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 617 27
+80004 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 617 2
+80011 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 618 7
+80017 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 618 20
 80028 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 619 20
-80039 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 620 20
-80044 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 620 20
-80055 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 620 20
-80086 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 632 24
-80092 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 621 16
-80107 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 623 32
-80112 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 623 52
-80122 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 623 32
-80133 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 624 20
-80138 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 624 46
-80143 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 624 46
-80149 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 624 20
-80156 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 626 20
-80161 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 626 26
-80167 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 626 20
-80174 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 627 20
-80179 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 627 28
-80185 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 627 20
-80192 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 629 20
-80232 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 629 20
-80239 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 630 20
-80244 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 630 44
-80255 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 630 20
-80266 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 619 2
-80278 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 637 9
-80303 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 638 1
-80308 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 638 1
-80318 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 639 0
-80343 --end-- 0 -1
+80033 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 619 20
+80044 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 619 20
+80075 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 631 24
+80081 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 620 16
+80096 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 622 32
+80101 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 622 52
+80111 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 622 32
+80122 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 623 20
+80127 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 623 46
+80132 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 623 46
+80138 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 623 20
+80145 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 625 20
+80150 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 625 26
+80156 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 625 20
+80163 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 626 20
+80168 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 626 28
+80174 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 626 20
+80181 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 628 20
+80221 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 628 20
+80228 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 629 20
+80233 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 629 44
+80244 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 629 20
+80259 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 618 2
+80260 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 619 0
+80266 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 636 0
+80280 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 637 1
+80289 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 637 9
+80312 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 638 1
+80317 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 638 1
+80327 C:\flow9\???\Translation-Compilation\lab12\lab12.flow 639 0
+80352 --end-- 0 -1
 
 L 4690 1 0 i
 L 4726 1 0 f
@@ -9774,15 +9777,14 @@ L 79751 2 0 prog
 L 79781 1 0 acc
 L 79781 1 1 conf
 L 79781 2 0 prog
-L 79875 0 0 proc
-L 79875 0 1 fname
-L 79889 0 1 src
-L 79889 0 2 prog
-L 79889 0 3 err_count
-L 79889 0 4 err
-L 79889 0 5 gsymswitch3
-L 79889 0 6 vprog
-L 79889 0 7 file_desc
-L 79889 1 0 file
-L 79951 1 0 msg
-L 79951 2 0 err_count
+L 79878 0 1 src
+L 79878 0 2 prog
+L 79878 0 3 err_count
+L 79878 0 4 err
+L 79878 0 5 gsymswitch3
+L 79878 0 6 vprog
+L 79878 0 7 file_desc
+L 79878 1 0 file
+L 79940 1 0 msg
+L 79940 2 0 err_count
+L 80280 0 0 fname
