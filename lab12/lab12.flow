@@ -604,7 +604,7 @@ runVnemo(prog : VNmProg, init : NmState) -> void {
 
 execute(file : string){
 		src = getFileContent(file);
-		//Преобразование в немо
+		//Преобразование в НеМо
 		prog = s2nm(src);
 		err_count = ref 0;
 		
@@ -618,13 +618,13 @@ execute(file : string){
 		if (^err_count == 0) {
             switch (nm2vnm(prog)) {
                 Some(vprog): {
-                    //Меняем расширение ".vnm" и записываем преобразованный код Немо
+                    //Записываем преобразованный код НеМо
                     file_desc = changeFileExt(file, ".vnm");
                     setFileContent(file_desc, vnmProg2s(vprog));
-                    //Транслируем вирт машину
+                    //Получаем дерево вирт машины и выводим машинный код
                     s2vnm(getFileContent(file_desc));
                     println(vnmProg2s(vprog));
-                    //Запускаем вирт машину
+                    //Запускаем вирт машину и выводим результат
                     println("Result of programm:");
                     runVnemo(vprog, NmState(makeTree()));
                 }
